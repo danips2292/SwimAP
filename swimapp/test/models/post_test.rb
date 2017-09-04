@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class NoticiaTest < ActiveSupport::TestCase
+class PostTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

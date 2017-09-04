@@ -1,2 +1,0 @@
-class Noticia < ApplicationRecord
-end
