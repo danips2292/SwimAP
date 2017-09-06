@@ -13,3 +13,89 @@
  *= require_tree .
  *= require_self
  */
+body{
+	background-color: #f2f5f9;
+	overflow: hidden;
+	}
+
+
+
+.outer_frame {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.middle_frame {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+.login{
+	font-family: 'PT Sans', sans-serif;
+	width: 500px;
+	padding: 10px;
+	background-color: #181918;
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.login table{
+
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+
+.login h1{
+	text-align: center;
+	font-family: 'Arvo', serif;
+	
+}
+.login form{
+	padding-top: 20px;
+	background-color: #232323;
+	margin:-10px;
+	padding-bottom: 50px;
+
+}
+.login input[type='text'], .login input[type='password'],
+.login input[type='email']{
+	height: 35px;
+	width: 200px;
+	border: 0px solid;
+    border-radius: 5px;
+    font-size: 17px;
+    padding-left: 5px;
+}
+
+.login input[type='submit']{
+	font-family: 'Arvo', serif;	
+	color: white;
+	float: right;
+	height: 35px;
+	width: 100px;
+	border: 0px solid;
+    border-radius: 5px;
+    font-size: 17px;
+    background-color: #50b250;
+    cursor:pointer;
+}
+.login input[type='submit']:hover{
+    background-color: #3f963f;
+}
+
+.link_container{
+	padding: 10px;
+	
+}
+
+.link_container a{
+	color: white;
+}

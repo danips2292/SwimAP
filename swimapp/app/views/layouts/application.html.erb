@@ -6,13 +6,14 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Anton|Arvo|PT+Sans" rel="stylesheet">
   </head>
 
   <body>
-  <%= link_to "Home" , root_path %>
-  <%= link_to "Noticias" , root_path %>
-  <%= link_to "Estudiantes" , root_path %>
-  <%= link_to "Grupos" , root_path %>
+  <% current_uri = request.env['PATH_INFO'] %>
+  <% if current_uri != '/users/sign_in' %> 
+      <% render 'top_nav_admin' %>
+  <% end %>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
     <%= yield %>
