@@ -15,8 +15,9 @@
  */
 body{
 	background-color: #f2f5f9;
-	overflow: hidden;
 	font-family: 'Arvo', serif;
+	margin:0px;
+	padding: 0px;
 }
 
 
@@ -67,16 +68,13 @@ body{
 
 .login img{
 	text-align: center;
-	
 	padding: 0px;
     display: block;
     margin: 0 auto;
 }
 }
 .login form{
-	padding-top: 20px;
 	background-color: #232323;
-	margin:-10px;
 	padding-bottom: 50px;
 
 }
@@ -115,7 +113,40 @@ body{
 	color: white;
 }
 
-.topbarcontainer{
-    height: 100px;
-    background-color: #2e3535;
+#topcontent{
+    height: 60px;
+    background-color: #181918;
+}
+.logo_top_menu{
+	padding: 0px;
+    display: block;
+    margin: 0 auto;
+    float: left;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+#regulartopbtnholder{
+	margin-left: 10px;
+}
+#regulartopbtnholder a{
+	color:white;
+	text-decoration: none;
+	font-size:15px;
+	line-height: 60px;
+	vertical-align: center;
+	margin-left: 10px;
+}
+#regulartopbtnholder a:first-child{
+	margin-left: 40px;
+
+}
+#sign_menu{
+	float: right;
+	margin-right: 20px;
+}
+#main_content{
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
 }
