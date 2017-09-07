@@ -1,0 +1,31 @@
+<%= form_for @routine do |f| %>
+  
+   <% if @routine.errors.any? %>
+     <div id="error_explanation">
+       <h2>
+         <%= pluralize(@routine.errors.count, "error") %> prohibited
+         this routine from being saved:
+       </h2>
+       <ul>
+         <% @routine.errors.full_messages.each do |msg| %>
+           <li><%= msg %></li>
+         <% end %>
+       </ul>
+     </div>
+   <% end %>
+  
+   <p>
+     <%= f.label :Distancia %><br>
+     <%= f.text_field :distance %>
+   </p>
+  
+   <p>
+     <%= f.label :Descripcion %><br>
+     <%= f.text_area :description %>
+   </p>
+  
+   <p>
+     <%= f.submit 'Crear Rutina', :class => 'btn btn-primary', :name => 'submit' %> 
+   </p>
+  
+ <% end %>
