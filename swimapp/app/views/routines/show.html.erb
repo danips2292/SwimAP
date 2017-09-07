@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Distance:</strong>
+  <%= @routine.distance %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @routine.description %>
+</p>
+
+<%= link_to 'Editar', edit_routine_path(@routine) %> |
+<%= link_to 'Atras', routines_path %>

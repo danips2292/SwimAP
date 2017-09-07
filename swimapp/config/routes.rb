@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+
   match  'initial_forms/register' => 'initial_forms/register' , via: [:get,:post]
   get 'user/fillForm'
   get 'user/index'
+
+
+  resources :routines
 
   resources :groups
   devise_for :admins
