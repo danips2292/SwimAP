@@ -10,10 +10,6 @@
   </head>
 
   <body>
-  <% current_uri = request.env['PATH_INFO'] %>
-  <% if current_uri != '/users/sign_in' %> 
-      <% render 'top_nav_admin' %>
-  <% end %>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
     <%= yield %>
