@@ -1,18 +1,16 @@
-<%= image_tag 'bg.jpeg', height:'100', :id => "bg" %>
-<div class="outer_frame">
+ <div class="outer_frame">
   <div class="middle_frame">
      <div class ="login">
-      <%= image_tag 'logo.png', height:'50', class:'logo'%>
+      <h1>Log in</h1>
       <div class='form_container'>
-      <H2> Logueate para acceder </H2>
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
            <table>
               <tr>
-                <td><%= "Correo" %></td>
+                <td><%= f.label :email %></td>
                 <td><%= f.email_field :email, autofocus: true %></td>
               </tr>
               <tr>
-                <td><%= "Contraseña" %></td>
+                <td><%= f.label :password %></td>
                 <td><%= f.password_field :password, autocomplete: "off" %></td>
               </tr>
 
@@ -21,14 +19,14 @@
 
                  <tr>
                     <td><%= f.check_box :remember_me %></td>
-                    <td><%= "Recordar" %></td>
+                    <td><%= f.label :remember_me %></td>
                 </tr>
 
-              <% end %>
+              <% end -%>
 
               <tr>
                 <td> </td>
-                <td>  <%= f.submit "Entrar" %> </td>
+                <td>  <%= f.submit "Log in" %> </td>
               </tr>
 
             </table>
@@ -37,7 +35,12 @@
                 <%= render "devise/shared/links" %>
             </div>
           <% end %>
+
       </div>
-    </div>
-  </div>
+
+
+      
+
+</div>
+</div>
 </div>
