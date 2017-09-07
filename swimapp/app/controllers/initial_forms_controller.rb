@@ -1,4 +1,5 @@
 class InitialFormsController < ApplicationController
+	layout 'layouts/content_partial'
   def register
   	@form = InitialForm.new(form_params)
   	if @form.save== false

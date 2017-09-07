@@ -1,4 +1,5 @@
 class RoutinesController < ApplicationController
+  layout 'layouts/_content_partial'
   before_action :set_routine, only: [:show, :edit, :update, :destroy]
 
   # GET /routines

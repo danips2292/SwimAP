@@ -19,7 +19,6 @@
              
               <%= render 'layouts/top_nav_dispatcher' %>
 
-
                
 
             </div>
@@ -27,10 +26,9 @@
         </div>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-
-
+  <div id='main_content' >
     <%= yield %>
-
+  </div>
   </body>
 </html>
 

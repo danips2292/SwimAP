@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  layout 'layouts/_content_partial'
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts

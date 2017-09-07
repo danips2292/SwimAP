@@ -1,4 +1,7 @@
 class GroupsController < ApplicationController
+
+  layout 'layouts/_content_partial'
+
   before_action :set_group, only: [:show, :edit, :update, :destroy]
 
   # GET /groups
