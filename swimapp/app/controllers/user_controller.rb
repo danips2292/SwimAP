@@ -1,5 +1,5 @@
 class UserController < ApplicationController
-	layout '_content_partial'
+	layout 'layouts/_content_partial'
   def index 
 
   end 
