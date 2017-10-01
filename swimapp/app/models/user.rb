@@ -7,6 +7,7 @@ class User < ApplicationRecord
  has_one :group
 
  validates_confirmation_of :email
+ has_secure_password
 
          
 end

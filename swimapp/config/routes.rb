@@ -1,14 +1,21 @@
 Rails.application.routes.draw do
 
+  get 'mobile/assistance'
+  get 'mobile/ranking'
+  get 'mobile/comments'
+  get 'mobile/selectStudents'
+
   get 'access/signup'
   post 'access/signup'
   get 'access/index'
   post 'access/new'
 
+
   
   get 'user/fillForm'
   get 'user/index'
 
+  post 'mobile/new_assistance'
 
   match  'initial_forms/register' => 'initial_forms/register' , via: [:get,:post]
   match 'access/attempt_login' => 'access/attempt_login', via: [:get,:post]
