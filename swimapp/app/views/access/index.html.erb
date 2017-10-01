@@ -1,0 +1,32 @@
+<%= image_tag 'bg.jpeg', height:'100', :id => "bg" %>
+<div class="outer_frame">
+  <div class="middle_frame">
+     <div class ="login">
+      <%= image_tag 'logo.png', height:'50', class:'logo'%>
+      <div class='form_container'>
+      <H2> Crea una nueva Cuenta </H2>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+          <%= form_tag(:action => 'attempt_login') do %>
+            <table>
+              <tr>
+                <td> Email </td>
+                <td> <%= text_field_tag(:email) %> </td>
+              </tr>
+              <tr>
+                <td> Contraseña </td>
+                <td> <%= password_field_tag(:password) %> </td>
+              </tr>
+              <tr>
+                <td> &nbsp; </td>
+                <td> <%= submit_tag("Ingresar") %> </td>
+              </tr>
+            </table>
+            <%end%>
+
+               <p>¿No tienes una cuenta? <%= link_to("Crea una Nueva Cuenta", :action => 'signup') %> </p>
+      </div>
+
+    </div>
+  </div>
+</div>

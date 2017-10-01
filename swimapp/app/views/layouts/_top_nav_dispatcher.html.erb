@@ -4,13 +4,6 @@
   <%= link_to "Rutinas", routines_path %>
 
   <div id="sign_menu" > 
-    <% if user_signed_in? %>
-    
-    <%= link_to 'Tu Perfil', edit_user_registration_path, :class => 'navbar-link' %>
-    <%= link_to "Salir", destroy_user_session_path, method: :delete,:class => 'navbar-link' %>
-  <% else %>
-    <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link' %>  
-    <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
-  <% end %>  
+
 
 </div>
