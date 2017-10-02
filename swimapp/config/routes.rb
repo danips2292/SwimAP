@@ -7,10 +7,14 @@ Rails.application.routes.draw do
   post 'mobile/finishAssistance'
   get 'mobile/finishedAssistance'
 
-
+  #Rutas para Comentarios
+  get 'mobile/comments'
+  get 'mobile/selectStudent/:id' => 'mobile#selectStudent'
+  get 'mobile/newComment/:id' => 'mobile#newComment'
+  post 'mobile/addComment'
 
   get 'mobile/ranking'
-  get 'mobile/comments'
+  
   
 
   get 'access/signup'

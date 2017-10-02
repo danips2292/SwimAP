@@ -5,6 +5,7 @@ class User < ApplicationRecord
   #:recoverable, :rememberable, :trackable, :validatable #,:confirmable
  has_one :initial_form
  has_one :group
+ has_many :comments
 
  validates_confirmation_of :email
  has_secure_password

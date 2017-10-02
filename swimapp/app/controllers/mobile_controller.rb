@@ -6,8 +6,6 @@ class MobileController < ApplicationController
   	@groups = Group.all
   end
 
-
-
   def new_assistance
   	@assistance = Assistance.new(assistance_params)
     if @assistance.save
@@ -45,10 +43,30 @@ class MobileController < ApplicationController
   end
 
   def comments
+    @groups = Group.all
   end
 
+  def selectStudent
+    @students = User.where(:group_id => params[:id])
+  end 
 
+  def newComment
+    @student =  User.find(params[:id])
+    
+  end
+
+  def addComment
+    @comment  =  Comment.new(comment_params)
+    if @comment.save
+      redirect_to(:action => 'finishedComment')
+    end
+  end
+  
   def assistance_params
       params.require(:assistance).permit(:name, :group_id)
+  end
+
+  def comment_params
+      params.require(:comment).permit(:description, :user_id)
   end
 end
