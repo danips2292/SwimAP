@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
 
+  #Rutas para asistencia
   get 'mobile/assistance'
+  post 'mobile/new_assistance'
+  get 'mobile/selectStudents/:id' => 'mobile#selectStudents'
+  post 'mobile/finishAssistance'
+  get 'mobile/finishedAssistance'
+
+
+
   get 'mobile/ranking'
   get 'mobile/comments'
-  get 'mobile/selectStudents'
+  
 
   get 'access/signup'
   post 'access/signup'
@@ -15,7 +23,7 @@ Rails.application.routes.draw do
   get 'user/fillForm'
   get 'user/index'
 
-  post 'mobile/new_assistance'
+  
 
   match  'initial_forms/register' => 'initial_forms/register' , via: [:get,:post]
   match 'access/attempt_login' => 'access/attempt_login', via: [:get,:post]
