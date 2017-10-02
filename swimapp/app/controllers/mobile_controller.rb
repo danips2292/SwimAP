@@ -40,6 +40,7 @@ class MobileController < ApplicationController
 
 
   def ranking
+    @students = User.all
   end
 
   def comments
@@ -49,6 +50,10 @@ class MobileController < ApplicationController
   def selectStudent
     @students = User.where(:group_id => params[:id])
   end 
+
+  def newRanking
+    @student = User.find(params[:id])
+  end
 
   def newComment
     @student =  User.find(params[:id])

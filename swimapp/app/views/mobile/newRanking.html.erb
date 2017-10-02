@@ -1,0 +1,21 @@
+<h2> Agregue el Tiempo </h2>
+
+<%= form_for :comment, :url => {:action => 'addRanking'} do |f| %>
+<%= f.hidden_field :user_id, :value => params[:id] %>
+<table>
+	<tr>
+		<th> Nombre </th>
+		<td> <%= @student.full_name %> </td>
+	</tr>
+	<tr>
+		<th> Tiempo </th>
+		<td><%= f.text_area :description %></td>
+	</tr>
+	<tr>
+		<th></th>
+		<td><%= submit_tag("Enviar") %></td>
+	</tr>
+
+</table>
+<%end%>
+
