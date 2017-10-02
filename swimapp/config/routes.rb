@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'mobile/selectStudent/:id' => 'mobile#selectStudent'
   get 'mobile/newComment/:id' => 'mobile#newComment'
   post 'mobile/addComment'
+  get 'mobile/finishedComment'
 
   get 'mobile/ranking'
   

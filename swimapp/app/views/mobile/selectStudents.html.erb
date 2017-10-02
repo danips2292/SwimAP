@@ -5,7 +5,7 @@
 <% @students.each do |student| %>
 	<tr>
 	<td><%= check_box_tag student.id, true, false %> </td>
-	<td><%= student.email %></td></tr>
+	<td><%= student.full_name %></td></tr>
 <%end%>
 <tr><td></td><td> <%= submit_tag("Guardar") %> </td></tr>
 <%end %>
