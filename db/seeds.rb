@@ -13,10 +13,10 @@ User.create(full_name: 'Ana Jimenez Aguilar', email: 'email3@gmail.com', passwwo
 User.create(full_name: 'Maria Bautista Rojas', email: 'email4@gmail.com', passwword: '1234', group_id: team.id)
 
 
-User.create(full_name: 'Antonia Atalanta Angelica', email: 'email5@gmail.com'. passwword: '1234', group_id: 2)
-User.create(full_name: 'Carmina Leonor Patroklos', email: 'email6@gmail.com'. passwword: '1234', group_id: 2)
-User.create(full_name: 'Ilithyia Rhea Dulce', email: 'email7@gmail.com'. passwword: '1234', group_id: 2)
-User.create(full_name: 'Tadeo Andromeda Prudencio', email: 'email8@gmail.com'. passwword: '1234', group_id: 2)
+User.create(full_name: 'Antonia Atalanta Angelica', email: 'email5@gmail.com', passwword: '1234', group_id: 2)
+User.create(full_name: 'Carmina Leonor Patroklos', email: 'email6@gmail.com', passwword: '1234', group_id: 2)
+User.create(full_name: 'Ilithyia Rhea Dulce', email: 'email7@gmail.com', passwword: '1234', group_id: 2)
+User.create(full_name: 'Tadeo Andromeda Prudencio', email: 'email8@gmail.com' , passwword: '1234', group_id: 2)
 
 
 User.create(full_name: 'Juanita Fabián Narcissus', email: 'email9@gmail.com', passwword: '1234', group_id: 3)
