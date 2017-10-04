@@ -49,7 +49,7 @@ class MobileController < ApplicationController
   end
 
   def selectStudent
-    @students = User.where(:id => params[:id])
+    @students = User.where(:group_id => params[:id])
   end 
 
   def newRanking
