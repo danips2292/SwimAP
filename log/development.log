@@ -259,3 +259,4 @@ Processing by MobileController#assistance as HTML
 Completed 200 OK in 40ms (Views: 20.8ms | ActiveRecord: 2.7ms)
 
 
+  [1m[36mGroup Load (1.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
