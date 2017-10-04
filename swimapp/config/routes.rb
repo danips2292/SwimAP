@@ -14,8 +14,12 @@ Rails.application.routes.draw do
   post 'mobile/addComment'
   get 'mobile/finishedComment'
 
+  #Rutas para ranking
   get 'mobile/ranking'
-  
+  get 'mobile/selectStudent/:id' => 'mobile#selectStudent'
+  get 'mobile/newRanking/:id' => 'mobile#newRanking'
+  post 'mobile/addRanking'
+  get 'mobile/finishedRanking'
   
 
   get 'access/signup'

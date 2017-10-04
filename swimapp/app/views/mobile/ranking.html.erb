@@ -1,2 +1,14 @@
-<h1>Mobile#ranking</h1>
-<p>Find me in app/views/mobile/ranking.html.erb</p>
+<!--
+
+	Para seleccion de un estudinate unicamente 
+
+-->
+<p>Seleccione el Estudiante<p>
+<table>
+<% @students.each do |student| %>
+	<tr>
+	<td><%= student.full_name %></td>
+	<td> <%= link_to( 'Seleccionar', action: 'newRanking', id: student.id) %>
+	</tr>
+<%end%>
+</table>

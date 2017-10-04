@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Swimapp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'normalize' %>
+    <%= stylesheet_link_tag    'skeleton'%>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Anton|Arvo|PT+Sans" rel="stylesheet">
+  </head>
+
+  <body>
+
+
+    <%= yield %>
+
+  </body>
+</html>

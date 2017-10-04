@@ -40,6 +40,8 @@ class MobileController < ApplicationController
 
 
   def ranking
+    @team = Group.where(tip_group: "Equipo").first
+    @students = User.where(group_id: @team.id)
   end
 
   def comments
@@ -47,12 +49,27 @@ class MobileController < ApplicationController
   end
 
   def selectStudent
-    @students = User.where(:group_id => params[:id])
+    @students = User.where(:id => params[:id])
   end 
+
+  def newRanking
+    @student =  User.find(params[:id])
+    puts params[:id]
+  end
+
+  def addRanking 
+     @ranking = RankingLine.new(ranking_params)
+     #binding.pry
+     @ranking.time = params[:ranking_line][:minutes]+params[:ranking_line][:seconds]+params[:ranking_line][:tenths]
+
+    if @ranking.save
+       redirect_to(:action => 'finishedRanking')
+    end
+
+  end
 
   def newComment
     @student =  User.find(params[:id])
-    
   end
 
   def addComment
@@ -61,7 +78,10 @@ class MobileController < ApplicationController
       redirect_to(:action => 'finishedComment')
     end
   end
-  
+
+
+  private 
+
   def assistance_params
       params.require(:assistance).permit(:name, :group_id)
   end
@@ -69,4 +89,9 @@ class MobileController < ApplicationController
   def comment_params
       params.require(:comment).permit(:description, :user_id)
   end
+
+  def ranking_params
+    params.require(:ranking_line).permit(:user_id, :distance, :style)
+  end
+
 end
