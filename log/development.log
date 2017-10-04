@@ -1,0 +1,205 @@
+Started GET "/mobile/ranking" for 127.0.0.1 at 2017-10-04 02:20:37 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MobileController#ranking as HTML
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."tip_group" = $1 ORDER BY "groups"."id" ASC LIMIT $2[0m  [["tip_group", "Equipo"], ["LIMIT", 1]]
+  Rendering mobile/ranking.html.erb within layouts/_mobile
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."group_id" = $1[0m  [["group_id", 1]]
+  Rendered mobile/ranking.html.erb within layouts/_mobile (22.7ms)
+Completed 200 OK in 84ms (Views: 34.2ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/mobile/comments" for 127.0.0.1 at 2017-10-04 02:20:49 -0600
+Processing by MobileController#comments as HTML
+  Rendering mobile/comments.html.erb within layouts/_mobile
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered mobile/comments.html.erb within layouts/_mobile (2.6ms)
+Completed 200 OK in 15ms (Views: 10.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/mobile/selectStudent/3" for 127.0.0.1 at 2017-10-04 02:20:51 -0600
+Processing by MobileController#selectStudent as HTML
+  Parameters: {"id"=>"3"}
+  Rendering mobile/selectStudent.html.erb within layouts/_mobile
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  Rendered mobile/selectStudent.html.erb within layouts/_mobile (2.0ms)
+Completed 200 OK in 18ms (Views: 9.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mobile/selectStudent/1" for 127.0.0.1 at 2017-10-04 02:20:57 -0600
+Processing by MobileController#selectStudent as HTML
+  Parameters: {"id"=>"1"}
+  Rendering mobile/selectStudent.html.erb within layouts/_mobile
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  Rendered mobile/selectStudent.html.erb within layouts/_mobile (2.1ms)
+Completed 200 OK in 23ms (Views: 13.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/mobile/selectStudent/3" for 127.0.0.1 at 2017-10-04 02:22:55 -0600
+Processing by MobileController#selectStudent as HTML
+  Parameters: {"id"=>"3"}
+  Rendering mobile/selectStudent.html.erb within layouts/_mobile
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  Rendered mobile/selectStudent.html.erb within layouts/_mobile (2.1ms)
+Completed 200 OK in 22ms (Views: 13.8ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/mobile/" for 127.0.0.1 at 2017-10-04 02:26:52 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (No route matches [GET] "/mobile"):
+  
+actionpack (5.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.5) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered collection of /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb [47 times] (15.0ms)
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.5ms)
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.3ms)
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (60.9ms)
+Started GET "/mobile/comments" for 127.0.0.1 at 2017-10-04 02:26:59 -0600
+Processing by MobileController#comments as HTML
+  Rendering mobile/comments.html.erb within layouts/_mobile
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered mobile/comments.html.erb within layouts/_mobile (11.3ms)
+Completed 200 OK in 36ms (Views: 14.9ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/mobile/selectStudent/3" for 127.0.0.1 at 2017-10-04 02:27:01 -0600
+Processing by MobileController#selectStudent as HTML
+  Parameters: {"id"=>"3"}
+  Rendering mobile/selectStudent.html.erb within layouts/_mobile
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."group_id" = $1[0m  [["group_id", 3]]
+  Rendered mobile/selectStudent.html.erb within layouts/_mobile (19.4ms)
+Completed 200 OK in 62ms (Views: 29.2ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/mobile/selectStudent/1" for 127.0.0.1 at 2017-10-04 02:27:06 -0600
+Processing by MobileController#selectStudent as HTML
+  Parameters: {"id"=>"1"}
+  Rendering mobile/selectStudent.html.erb within layouts/_mobile
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."group_id" = $1[0m  [["group_id", 1]]
+  Rendered mobile/selectStudent.html.erb within layouts/_mobile (2.6ms)
+Completed 200 OK in 22ms (Views: 14.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/mobile/newComment/7" for 127.0.0.1 at 2017-10-04 02:27:07 -0600
+Processing by MobileController#newComment as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering mobile/newComment.html.erb within layouts/_mobile
+  Rendered mobile/newComment.html.erb within layouts/_mobile (3.8ms)
+Completed 200 OK in 21ms (Views: 12.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/mobile/addComment" for 127.0.0.1 at 2017-10-04 02:27:24 -0600
+Processing by MobileController#addComment as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"teeFa/VyoIM4aQdlMpXud1k8GcoE0UXdA6v6/YowHkizC119WRiWThMkP3mm+9yLcBsMONzRfu5E4TUxPT8aUQ==", "comment"=>{"user_id"=>"7", "description"=>"Excelente nadada hoy! "}, "commit"=>"Enviar"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.7ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 7], ["description", "Excelente nadada hoy! "], ["created_at", "2017-10-04 08:27:24.200039"], ["updated_at", "2017-10-04 08:27:24.200039"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to 
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 12.2ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"finishedComment", :controller=>"mobile"}):
+  
+app/controllers/mobile_controller.rb:78:in `addComment'
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.6ms)
+Started GET "/mobile/comments" for 127.0.0.1 at 2017-10-04 02:28:30 -0600
+Processing by MobileController#comments as HTML
+  Rendering mobile/comments.html.erb within layouts/_mobile
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered mobile/comments.html.erb within layouts/_mobile (9.5ms)
+Completed 200 OK in 33ms (Views: 16.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/mobile/selectStudent/3" for 127.0.0.1 at 2017-10-04 02:28:32 -0600
+Processing by MobileController#selectStudent as HTML
+  Parameters: {"id"=>"3"}
+  Rendering mobile/selectStudent.html.erb within layouts/_mobile
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."group_id" = $1[0m  [["group_id", 3]]
+  Rendered mobile/selectStudent.html.erb within layouts/_mobile (20.2ms)
+Completed 200 OK in 59ms (Views: 29.2ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/mobile/selectStudent/1" for 127.0.0.1 at 2017-10-04 02:28:35 -0600
+Processing by MobileController#selectStudent as HTML
+  Parameters: {"id"=>"1"}
+  Rendering mobile/selectStudent.html.erb within layouts/_mobile
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."group_id" = $1[0m  [["group_id", 1]]
+  Rendered mobile/selectStudent.html.erb within layouts/_mobile (2.8ms)
+Completed 200 OK in 22ms (Views: 14.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/mobile/newComment/7" for 127.0.0.1 at 2017-10-04 02:28:36 -0600
+Processing by MobileController#newComment as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering mobile/newComment.html.erb within layouts/_mobile
+  Rendered mobile/newComment.html.erb within layouts/_mobile (2.1ms)
+Completed 200 OK in 27ms (Views: 16.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/mobile/addComment" for 127.0.0.1 at 2017-10-04 02:28:59 -0600
+Processing by MobileController#addComment as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QC1jk+0/vdIf6Jos7HQilc/5NZibuEcPbLW+kHQ0UVlGwbuFQVWLHzSlojB4GhBp5t4gakO4fDwr/3FcwztVQA==", "comment"=>{"user_id"=>"7", "description"=>"Mejorar la brazada. Saludame a tus papas! "}, "commit"=>"Enviar"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 7], ["description", "Mejorar la brazada. Saludame a tus papas! "], ["created_at", "2017-10-04 08:28:59.507080"], ["updated_at", "2017-10-04 08:28:59.507080"]]
+  [1m[35m (17.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/mobile/finishedComment
+Completed 302 Found in 40ms (ActiveRecord: 18.6ms)
+
+
+Started GET "/mobile/finishedComment" for 127.0.0.1 at 2017-10-04 02:28:59 -0600
+Processing by MobileController#finishedComment as HTML
+  Rendering mobile/finishedComment.html.erb within layouts/_mobile
+  Rendered mobile/finishedComment.html.erb within layouts/_mobile (0.7ms)
+Completed 200 OK in 15ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mobile/comments" for 127.0.0.1 at 2017-10-04 02:29:02 -0600
+Processing by MobileController#comments as HTML
+  Rendering mobile/comments.html.erb within layouts/_mobile
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered mobile/comments.html.erb within layouts/_mobile (2.9ms)
+Completed 200 OK in 24ms (Views: 14.9ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 7]]

@@ -1,0 +1,34 @@
+<%= form_for @group do |f| %>
+  <% if @group.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@group.errors.count, "error") %> prohibited
+        this post from being saved:
+      </h2>
+      <ul>
+        <% @group.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+   
+  <p>
+    <%= f.label :Nombre %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :Tipo_Grupo %><br>
+    <%= f.text_area :tip_group %>
+  </p>
+
+  <p>
+    <%= f.label :Horario %><br>
+    <%= f.text_area :schedule %>
+  </p>
+
+  <p>
+    <%= f.submit 'Crear Grupo' %>
+  </p>
+
+<% end %>

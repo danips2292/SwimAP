@@ -1,0 +1,12 @@
+<p>Seleccione los estudiantes<p>
+<%= form_tag(:action => 'finishAssistance') do %>
+<%= hidden_field_tag "id", params[:id] %>
+<table>
+<% @students.each do |student| %>
+	<tr>
+	<td><%= check_box_tag student.id, true, false %> </td>
+	<td><%= student.email %></td></tr>
+<%end%>
+<tr><td></td><td> <%= submit_tag("Guardar") %> </td></tr>
+<%end %>
+</table>

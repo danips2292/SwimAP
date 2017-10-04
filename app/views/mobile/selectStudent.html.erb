@@ -1,0 +1,14 @@
+<!--
+
+	Para seleccion de un estudinate unicamente 
+
+-->
+<p>Seleccione el Estudiante<p>
+<table>
+<% @students.each do |student| %>
+	<tr>
+	<td><%= student.full_name %></td>
+	<td> <%= link_to( 'Seleccionar', action: 'newComment', id: student.id) %>
+	</tr>
+<%end%>
+</table>
