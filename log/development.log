@@ -260,3 +260,25 @@ Completed 200 OK in 40ms (Views: 20.8ms | ActiveRecord: 2.7ms)
 
 
   [1m[36mGroup Load (1.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."tip_group" = $1[0m  [["tip_group", "Equipo"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."tip_group" = $1 ORDER BY "groups"."id" ASC LIMIT $2[0m  [["tip_group", "Equipo"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."tip_group" = $1 ORDER BY "groups"."id" ASC LIMIT $2[0m  [["tip_group", "Equipo"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (18.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "group_id", "password_digest", "full_name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "email1@gmail.com"], ["created_at", "2017-10-04 19:36:29.666999"], ["updated_at", "2017-10-04 19:36:29.666999"], ["group_id", 1], ["password_digest", "$2a$10$czGSsM9VcKENvAoOEm4ak.jKP7/aKooviocUOdaTkjOOatM4Dzlo6"], ["full_name", "Juan Carlos Perez"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "group_id", "password_digest", "full_name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "email2@gmail.com"], ["created_at", "2017-10-04 19:36:29.752498"], ["updated_at", "2017-10-04 19:36:29.752498"], ["group_id", 1], ["password_digest", "$2a$10$Ah9w41okqZkbKiIlx5Q1Wu1KT0xhYvFGLeylldVke2ZoXL.JpWW4u"], ["full_name", "John Marston"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "group_id", "password_digest", "full_name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "email3@gmail.com"], ["created_at", "2017-10-04 19:36:29.820130"], ["updated_at", "2017-10-04 19:36:29.820130"], ["group_id", 1], ["password_digest", "$2a$10$kvoedYlRHDtZZRkcCwfpFeQXsfaaBZsl2VCQhn/bkdzrvL5EsgcvG"], ["full_name", "Ana Jimenez Aguilar"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "group_id", "password_digest", "full_name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "email4@gmail.com"], ["created_at", "2017-10-04 19:36:29.885694"], ["updated_at", "2017-10-04 19:36:29.885694"], ["group_id", 1], ["password_digest", "$2a$10$RXA.G/5QPZHIE1WAM9dnJ.ByumYxqhvnaYndwkeRTjEGRqucfIcNO"], ["full_name", "Maria Bautista Rojas"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "group_id", "password_digest", "full_name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "email5@gmail.com"], ["created_at", "2017-10-04 19:36:29.952583"], ["updated_at", "2017-10-04 19:36:29.952583"], ["group_id", 2], ["password_digest", "$2a$10$.wh.ZUv73diPtPOxFh18b.cahSp.GmTD08DCaBLQssy8HBA9QV7gy"], ["full_name", "Antonia Atalanta Angelica"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
