@@ -6,6 +6,7 @@ class User < ApplicationRecord
  has_one :initial_form
  has_one :group
  has_many :comments
+ has_many :ranking_lines
 
  validates_confirmation_of :email
  has_secure_password

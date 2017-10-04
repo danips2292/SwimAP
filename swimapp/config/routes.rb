@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get 'mobile/selectStudent/:id' => 'mobile#selectStudent'
   get 'mobile/newRanking/:id' => 'mobile#newRanking'
   post 'mobile/addRanking'
+  get 'mobile/finishedRanking'
   
 
   get 'access/signup'
