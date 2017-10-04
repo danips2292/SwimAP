@@ -1,2 +1,0 @@
-class InitialForm < ApplicationRecord
-end

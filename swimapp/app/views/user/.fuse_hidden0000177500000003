@@ -1,9 +1,0 @@
-<h1>Formulario de Información Médica</h1>
-<p>Por favor llene la información requerida</p>
-
-
-<%= form_for (:initial_form), :url => {:controller  => 'initial_forms' , :action => 'register'} do |m| %>
-
-	<%=  render partial: 'initial_form', :locals => {:m => m}  %>
-	<%= submit_tag( "Guardar") %>
-<%end%>
