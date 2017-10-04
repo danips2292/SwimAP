@@ -1,2 +1,18 @@
-<h1>Mobile#comments</h1>
-<p>Find me in app/views/mobile/comments.html.erb</p>
+<h2>Selecciona primero el Grupo</h2>
+<table>
+	<th>ID</th>
+	<th>Nombre</th>
+	<th>Horario</th>
+	<th></th>
+	<% @groups.each do |group| %>
+	<tr>
+	<td><%= group.id %></td>
+	<td><%= group.name %></td>
+	<td><%= group.schedule %></td>
+	<td><%= link_to  'Seleccionar', action: 'selectStudent', id: group.id %></td>
+	
+	</tr>
+
+<%end %>
+
+</table>
