@@ -16,6 +16,7 @@ class Admin::PostsController < ApplicationController
 
   # GET /posts/new
   def new
+    @groups = Group.all
     @post = Post.new
   end
 
@@ -30,7 +31,7 @@ class Admin::PostsController < ApplicationController
     @post = Post.new(post_params)
     
      if @post.save
-      redirect_to @post
+      redirect_to admin_posts_path
      else
       render 'new'
      end   
@@ -42,7 +43,7 @@ class Admin::PostsController < ApplicationController
     @post = Post.find(params[:id])
     
     if @post.update(post_params)
-      redirect_to @post
+      redirect_to admin_posts_path
     else
       render 'edit'
     end
@@ -53,7 +54,7 @@ class Admin::PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])  
     @post.destroy 
-    redirect_to posts_path
+    redirect_to admin_posts_path
   end
 
   private
@@ -64,7 +65,7 @@ class Admin::PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :text)
+      params.require(:post).permit(:title, :text, :group_id)
     end
 end
 
