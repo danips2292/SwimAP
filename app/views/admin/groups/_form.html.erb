@@ -1,0 +1,81 @@
+<% if  params[:action]  == 'new' %>
+  <%= form_for @group, url: admin_groups_path(@group)  do |f| %>
+    <% if @group.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@group.errors.count, "error") %> prohibited
+          this post from being saved:
+        </h2>
+        <ul>
+          <% @group.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+     
+    <p>
+      <%= f.label :Nombre %><br>
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.label :Tipo_Grupo %><br>
+      <%=  f.collection_select :tip_group, Group::GROUP_TYPE, :to_s, :to_s, include_blank: true  %> 
+    </p>
+
+    <p>
+      <%= f.label :Horario %><br>
+      <%= f.text_area :schedule %>
+    </p>
+
+    <p>
+      <%= f.submit 'Crear Grupo' %>
+    </p>
+
+  <% end %>
+<!--
+
+  
+  codigo para form de edit
+
+
+  -->
+
+<% else %>
+ <%= form_for @group, url: admin_group_path(@group)  do |f| %>
+    <% if @group.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@group.errors.count, "error") %> prohibited
+          this post from being saved:
+        </h2>
+        <ul>
+          <% @group.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+     
+    <p>
+      <%= f.label :Nombre %><br>
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.label :Tipo_Grupo %><br>
+      <%=  f.collection_select :tip_group, Group::GROUP_TYPE, :to_s, :to_s, include_blank: true  %> 
+    </p>
+
+    <p>
+      <%= f.label :Horario %><br>
+      <%= f.text_area :schedule %>
+    </p>
+
+    <p>
+      <%= f.submit 'Editar Grupo' %>
+    </p>
+
+  <% end %>
+<% end %>
+
+

@@ -1,0 +1,27 @@
+<h1>Rutinas</h1>
+
+<%= link_to image_tag("newIcon.png", class: 'new_icon', border: 0), new_admin_routine_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Distancia</th>
+      <th>Descripción</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @routines.each do |routine| %>
+      <tr>
+        <td><%= routine.distance %></td>
+        <td><%= routine.description %></td>
+        <td><%= link_to image_tag("editIcon.png", class: 'edit_icon', border: 0), edit_admin_routine_path(routine) %></td>
+        <td><%= link_to image_tag("removeIcon.png", class: 'delete_icon', border: 0), admin_routine_path(routine), method: :delete, data: { confirm: 'Esta seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

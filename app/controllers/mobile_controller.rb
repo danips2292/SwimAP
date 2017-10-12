@@ -54,7 +54,6 @@ class MobileController < ApplicationController
 
   def newRanking
     @student =  User.find(params[:id])
-    puts params[:id]
   end
 
   def addRanking 

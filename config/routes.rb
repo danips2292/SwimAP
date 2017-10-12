@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    resources :routines
+    resources :groups
+    resources :posts
+  end
+
+  get 'admin/index'
+
   #Rutas para asistencia
   get 'mobile/assistance'
   post 'mobile/new_assistance'
@@ -31,19 +39,10 @@ Rails.application.routes.draw do
   
   get 'user/fillForm'
   get 'user/index'
-
-  
-
-  match  'initial_forms/register' => 'initial_forms/register' , via: [:get,:post]
   match 'access/attempt_login' => 'access/attempt_login', via: [:get,:post]
 
-  resources :routines
-  resources :groups
 
-  resources :posts
-  root to: "posts#index"
-  #devise_for :admins
-  #devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  #-----------------
+
 
 end
