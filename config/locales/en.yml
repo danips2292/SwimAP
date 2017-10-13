@@ -20,4 +20,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      user:
+        full_name: 'Nombre completo'
+        password: 'Contraseña'
+        email_confirmation: 'Confirmacion de email'

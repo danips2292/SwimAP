@@ -1,30 +1,33 @@
 class AccessController < ApplicationController
 	layout 'layouts/_login'
 
+
+
   def index
+    check_session_state
   end
 
+
+
   def signup
-    #@groups = Group.all.where('id = 1')
+    check_session_state
     @groups = Group.all
     @user = User.new
   end
 
+
+
   def new
     @user = User.new(user_params)
-    if params[:email] == params[:email_confirm]
-      if @user.save
-        flash[:notice] = "Usuario creado exitosamente. Acceda a la cuenta!"
-        redirect_to(:action => 'index')
-      else
-        flash[:notice] = "Intentelo de nuevo"
-        render('signup')
-      end
+    if @user.save
+      flash[:notice] = "Usuario creado exitosamente. Acceda a la cuenta!"
+      redirect_to(:action => 'index')
     else
-      flash[:notice] = "Los emails no coinciden"
-      redirect_to(:action => 'signup')
+      flash[:notice] = @user.errors.details.keys.map { |attr| @user.errors.full_messages_for(attr).first}.join(", ")
+      render('signup')
     end
   end
+
 
   def attempt_login
     if session[:user_id] != nil
@@ -42,25 +45,49 @@ class AccessController < ApplicationController
       session[:user_id] = authorized_user.id
       session[:email] = authorized_user.email
       flash[:notice] = "Bienvenido!"
-      redirect_to('/admin')
+      if authorized_user.is_admin
+        redirect_to admin_index_path
+      elsif Group.find(authorized_user.group_id).tip_group == 'Regular'
+        redirect_to user_index_path
+      elsif Group.find(authorized_user.group_id).tip_group == 'Equipo'
+        redirect_to team_index_path
+      end
     else
       flash[:notice] = "Correo o contraseña inválida "
-      redirect_to(:action => 'index')
+      redirect_to(:action => 'login')
     end
-
-
   end
+
+
+
 
   def logout
     session[:user_id] = nil
     session[:email] = nil
-    flash[:notice] = "Logged Out"
-    redirect_to(:action => 'index')
+    flash[:notice] = "Sesión Terminada"
+    redirect_to access_index_path
   end
+
+
+
 
   private
     def user_params
-      params.require(:user).permit(:email, :password, :group_id)
+      params.require(:user).permit(:full_name, :email, :email_confirmation, :password, :group_id)
     end
+
+    def check_session_state
+      if session[:user_id] != nil
+        @user = User.find(session[:user_id])
+        if @user.is_admin
+          redirect_to admin_index_path
+        elsif Group.find(@user.group_id).tip_group == 'Regular'
+          redirect_to user_index_path
+        elsif Group.find(@user.group_id).tip_group == 'Equipo'
+          redirect_to team_index_path
+        end
+      end
+    end
+
 
 end

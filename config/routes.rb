@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
 
+  get 'team/index'
+
+  get 'admin/index'
   namespace :admin do
     resources :routines
     resources :groups
     resources :posts
   end
 
-  get 'admin/index'
+  
 
   #Rutas para asistencia
   get 'mobile/assistance'
@@ -34,6 +37,7 @@ Rails.application.routes.draw do
   post 'access/signup'
   get 'access/index'
   post 'access/new'
+  post 'access/logout'
 
 
   

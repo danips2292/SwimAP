@@ -13,3 +13,4 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( normalize.css )
 Rails.application.config.assets.precompile += %w( skeleton.css )
 Rails.application.config.assets.precompile += %w( movil.css )
+Rails.application.config.assets.precompile += %w( login.css )

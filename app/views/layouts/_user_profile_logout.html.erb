@@ -1,0 +1,9 @@
+<div class='login_state_holder'>
+	<% if session[:user_id] != nil %>
+		<%= User.find(session[:user_id]).full_name %><%= link_to 'Cerrar Sesión' , access_logout_path , method: :post%>
+
+	<% else %>
+		<%= link_to 'Logeate' , access_index_path %>,
+		<%= link_to 'Regitsrate' , access_signup_path %> 
+	<% end %>
+</div>
