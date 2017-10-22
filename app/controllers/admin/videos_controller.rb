@@ -1,5 +1,6 @@
 class Admin::VideosController < ApplicationController
-	layout 'layouts/_ytvideo'
+	layout 'layouts/_admin_partial'
+
   def index
   end
   def show
