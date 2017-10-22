@@ -7,6 +7,7 @@ class User < ApplicationRecord
  has_one :group
  has_many :comments
  has_many :ranking_lines
+ has_many :videos
 
  
  
