@@ -11270,3 +11270,91 @@ Completed 200 OK in 122ms (Views: 117.8ms | ActiveRecord: 0.4ms)
   [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "email99@gmail.com"], ["id", 20], ["LIMIT", 1]]
   [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "is_accepted" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2017-10-23 06:04:47.548998"], ["is_accepted", "t"], ["id", 20]]
   [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/admin/requests/accept?id=20" for 127.0.0.1 at 2017-10-23 00:05:41 -0600
+Processing by Admin::RequestsController#accept as HTML
+  Parameters: {"authenticity_token"=>"JPkj3xBNv1Y8uUkPTRgJepeR1idt8Zqd1MEYonDiQMLsVR8km2BXgnW9QoV0EXbVEM9oTc9+8A0KZITapCknWQ==", "id"=>"20"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "email99@gmail.com"], ["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/requests/index
+Completed 302 Found in 32ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/admin/requests/index" for 127.0.0.1 at 2017-10-23 00:05:42 -0600
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/_admin_partial
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."is_accepted" = $1[0m  [["is_accepted", "f"]]
+  Rendered admin/requests/index.html.erb within layouts/_admin_partial (7.2ms)
+  Rendered layouts/_top_nav_admin.html.erb (0.9ms)
+  Rendered layouts/_user_profile_logout.html.erb (0.6ms)
+Completed 200 OK in 116ms (Views: 111.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/admin/requests/accept?id=19" for 127.0.0.1 at 2017-10-23 00:05:44 -0600
+Processing by Admin::RequestsController#accept as HTML
+  Parameters: {"authenticity_token"=>"FR7dmcKiyndVLFLHxw0Vr7CLYj7+woRkahL4AMrUIZXdsuFiSY8ioxwoWU3+BGoAN9XcVFxN7vS0t2R4Hh9GDg==", "id"=>"19"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "alejaro34@outlook.com"], ["id", 19], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "is_accepted" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["is_accepted", "t"], ["updated_at", "2017-10-23 06:05:44.086642"], ["id", 19]]
+  [1m[35m (17.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/requests/index
+Completed 302 Found in 28ms (ActiveRecord: 19.7ms)
+
+
+Started GET "/admin/requests/index" for 127.0.0.1 at 2017-10-23 00:05:44 -0600
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/_admin_partial
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."is_accepted" = $1[0m  [["is_accepted", "f"]]
+  Rendered admin/requests/index.html.erb within layouts/_admin_partial (6.2ms)
+  Rendered layouts/_top_nav_admin.html.erb (0.9ms)
+  Rendered layouts/_user_profile_logout.html.erb (0.6ms)
+Completed 200 OK in 119ms (Views: 112.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/admin/requests/accept?id=15" for 127.0.0.1 at 2017-10-23 00:05:46 -0600
+Processing by Admin::RequestsController#accept as HTML
+  Parameters: {"authenticity_token"=>"YdeeCeNd2lZwmLzOB7PN6RfhuIlcD9ruFvUqIHddv42pe6LyaHAygjmct0Q+urJGkL8G4/6AsH7IULZYo5bYFg==", "id"=>"15"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "kljks"], ["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/admin/requests/index
+Completed 302 Found in 8ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/requests/index" for 127.0.0.1 at 2017-10-23 00:05:46 -0600
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/_admin_partial
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."is_accepted" = $1[0m  [["is_accepted", "f"]]
+  Rendered admin/requests/index.html.erb within layouts/_admin_partial (7.0ms)
+  Rendered layouts/_top_nav_admin.html.erb (0.8ms)
+  Rendered layouts/_user_profile_logout.html.erb (0.7ms)
+Completed 200 OK in 122ms (Views: 116.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/requests/reject?id=11" for 127.0.0.1 at 2017-10-23 00:10:43 -0600
+Processing by Admin::RequestsController#reject as HTML
+  Parameters: {"authenticity_token"=>"LnPTwG2XGiBMeP9UHottkvjOEvFtDdiouLFeEGRtotzm3+875rry9AV89N4nghI9f5Csm8+CsjhmFMJosKbFRw==", "id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (17.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 11]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 17.6ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (PG::ForeignKeyViolation: ERROR:  update or delete on table "users" violates foreign key constraint "fk_rails_e5865356bc" on table "assistances_users"
+DETAIL:  Key (id)=(11) is still referenced from table "assistances_users".
+: DELETE FROM "users" WHERE "users"."id" = $1):
+  
+app/controllers/admin/requests_controller.rb:21:in `reject'
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.3ms)

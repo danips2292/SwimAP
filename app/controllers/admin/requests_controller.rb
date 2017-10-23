@@ -17,5 +17,13 @@ class Admin::RequestsController < ApplicationController
   end
 
   def reject
+  	@user = User.find(params[:id])
+  	if @user.destroy
+  		flash[:notice] = [@user.full_name, "fue eliminado"].join(" ")
+  		redirect_to admin_requests_index_path
+  	else
+  		flash[:notice] =  @user.errors.details.keys.map { |attr| @user.errors.full_messages_for(attr).first}.join(", ")
+  		redirect_to admin_requests_index_path
+  	end
   end
 end
