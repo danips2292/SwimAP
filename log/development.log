@@ -11358,3 +11358,24 @@ app/controllers/admin/requests_controller.rb:21:in `reject'
   Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
   Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.3ms)
+Started GET "/user/pending/index" for 127.0.0.1 at 2017-10-23 00:20:46 -0600
+Processing by User::PendingController#index as HTML
+  Rendering user/pending/index.html.erb within layouts/_login
+  Rendered user/pending/index.html.erb within layouts/_login (0.3ms)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/pending/index" for 127.0.0.1 at 2017-10-23 00:21:42 -0600
+Processing by User::PendingController#index as HTML
+  Rendering user/pending/index.html.erb within layouts/_login
+  Rendered user/pending/index.html.erb within layouts/_login (0.5ms)
+Completed 200 OK in 23ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/pending/index" for 127.0.0.1 at 2017-10-23 00:22:31 -0600
+Processing by User::PendingController#index as HTML
+  Rendering user/pending/index.html.erb within layouts/_login
+  Rendered user/pending/index.html.erb within layouts/_login (4.2ms)
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
