@@ -55,6 +55,7 @@ class AccessController < ApplicationController
         end
       else
          redirect_to user_pending_index_path
+      end
     else
       flash[:notice] = "Correo o contraseña inválida "
       redirect_to(:action => 'login')
