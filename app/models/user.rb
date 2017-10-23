@@ -21,7 +21,7 @@ class User < ApplicationRecord
   validates_length_of :email, :maximum => 100
   validates_format_of :email, :with => EMAIL_REGEX, :message => "no es valido"
   validates_confirmation_of :email, :message => "no coincide"
-  validates_presence_of :password, :message => 'no puede estar en blanco'
+  validates_presence_of :password, :message => 'no puede estar en blanco', on: :update, allow_blank: true
   has_secure_password
           
 end
