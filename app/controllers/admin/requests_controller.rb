@@ -6,8 +6,7 @@ class Admin::RequestsController < ApplicationController
 
   def accept
   	@user = User.find(params[:id])
-  	@user.is_accepted = true
-  	if @user.save
+  	if @user.update(is_accepted: true)
   		flash[:notice] = [@user.full_name, "fue acceptado. El usuario ya puede acceder a la cuenta"].join(" ")
   		redirect_to admin_requests_index_path
   	else

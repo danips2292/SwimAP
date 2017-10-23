@@ -11180,3 +11180,84 @@ Processing by Admin::RequestsController#index as HTML
 Completed 200 OK in 124ms (Views: 119.6ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/admin/requests/index" for 127.0.0.1 at 2017-10-22 23:52:21 -0600
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/_admin_partial
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."is_accepted" = $1[0m  [["is_accepted", "f"]]
+  Rendered admin/requests/index.html.erb within layouts/_admin_partial (9.2ms)
+  Rendered layouts/_top_nav_admin.html.erb (0.8ms)
+  Rendered layouts/_user_profile_logout.html.erb (0.5ms)
+Completed 200 OK in 130ms (Views: 122.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/admin/requests/accept?id=6" for 127.0.0.1 at 2017-10-22 23:52:22 -0600
+Processing by Admin::RequestsController#accept as HTML
+  Parameters: {"authenticity_token"=>"pE/d8+OUkd8Bv3ARrPsDv4OpbqOYCmqXh78x0hClOf9s4+EIaLl5C0i7e5uV8nwQBPfQyTqFAAdZGq2qxG5eZA==", "id"=>"6"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "alejaro34@gmail.com"], ["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/admin/requests/index
+Completed 302 Found in 8ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/requests/index" for 127.0.0.1 at 2017-10-22 23:52:22 -0600
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/_admin_partial
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."is_accepted" = $1[0m  [["is_accepted", "f"]]
+  Rendered admin/requests/index.html.erb within layouts/_admin_partial (6.7ms)
+  Rendered layouts/_top_nav_admin.html.erb (0.8ms)
+  Rendered layouts/_user_profile_logout.html.erb (0.5ms)
+Completed 200 OK in 111ms (Views: 105.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/admin/requests/accept?id=20" for 127.0.0.1 at 2017-10-22 23:56:34 -0600
+Processing by Admin::RequestsController#accept as HTML
+  Parameters: {"authenticity_token"=>"moRJR7OihpNEBa9iCBzDlhNFKJtzfQysqlEepcGcpLtSKHW8OI9uRw0BpOgxFbw5lBuW8dHyZjx09ILdFVfDIA==", "id"=>"20"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.4ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/admin/requests_controller.rb:10:in `accept'
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.9ms)
+Started GET "/admin/requests/index" for 127.0.0.1 at 2017-10-22 23:58:07 -0600
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/_admin_partial
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."is_accepted" = $1[0m  [["is_accepted", "f"]]
+  Rendered admin/requests/index.html.erb within layouts/_admin_partial (15.3ms)
+  Rendered layouts/_top_nav_admin.html.erb (1.3ms)
+  Rendered layouts/_user_profile_logout.html.erb (0.6ms)
+Completed 200 OK in 131ms (Views: 116.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/admin/requests/accept?id=20" for 127.0.0.1 at 2017-10-22 23:58:10 -0600
+Processing by Admin::RequestsController#accept as HTML
+  Parameters: {"authenticity_token"=>"ZUepzprLIoM7EY9ugk1J2g3rjgxfDz2cUcTSLJNJ9eqt65U1EebKV3IVhOS7RDZ1irUwZv2AVwyPYU5UR4KScQ==", "id"=>"20"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "email99@gmail.com"], ["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/admin/requests/index
+Completed 302 Found in 10ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/requests/index" for 127.0.0.1 at 2017-10-22 23:58:10 -0600
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/_admin_partial
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."is_accepted" = $1[0m  [["is_accepted", "f"]]
+  Rendered admin/requests/index.html.erb within layouts/_admin_partial (6.4ms)
+  Rendered layouts/_top_nav_admin.html.erb (1.2ms)
+  Rendered layouts/_user_profile_logout.html.erb (0.5ms)
+Completed 200 OK in 122ms (Views: 117.8ms | ActiveRecord: 0.4ms)
+
+
