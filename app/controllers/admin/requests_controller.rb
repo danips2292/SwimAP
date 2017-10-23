@@ -11,7 +11,7 @@ class Admin::RequestsController < ApplicationController
   		flash[:notice] = [@user.full_name, "fue acceptado. El usuario ya puede acceder a la cuenta"].join(" ")
   		redirect_to admin_requests_index_path
   	else
-  		flash[:notice] = [@user.full_name, "no pudo ser aceptado. Intente de nuevo"].join(" ")
+  		flash[:notice] =  @user.errors.details.keys.map { |attr| @user.errors.full_messages_for(attr).first}.join(", ")
   		redirect_to admin_requests_index_path
 
   	end

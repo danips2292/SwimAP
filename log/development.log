@@ -11159,3 +11159,24 @@ Processing by Admin::RequestsController#index as HTML
 Completed 200 OK in 131ms (Views: 122.8ms | ActiveRecord: 0.6ms)
 
 
+Started POST "/admin/requests/accept?id=7" for 127.0.0.1 at 2017-10-22 23:51:05 -0600
+Processing by Admin::RequestsController#accept as HTML
+  Parameters: {"authenticity_token"=>"eXIXgcIT5gykFe+7zOcjJCMDVN4BacLv8dKDZZGZpLCx3it6ST4O2O0R5DH17lyLpF3qtKPmqH8vdx8dRVLDKw==", "id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "usuario1@gmail.com"], ["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/admin/requests/index
+Completed 302 Found in 28ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/requests/index" for 127.0.0.1 at 2017-10-22 23:51:05 -0600
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/_admin_partial
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."is_accepted" = $1[0m  [["is_accepted", "f"]]
+  Rendered admin/requests/index.html.erb within layouts/_admin_partial (7.7ms)
+  Rendered layouts/_top_nav_admin.html.erb (0.9ms)
+  Rendered layouts/_user_profile_logout.html.erb (0.6ms)
+Completed 200 OK in 124ms (Views: 119.6ms | ActiveRecord: 0.4ms)
+
+
