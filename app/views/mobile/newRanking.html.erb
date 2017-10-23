@@ -20,19 +20,15 @@
 
 	<tr>
 		<th> Tiempo </th>
-		<td><%= f.text_field :minutes, class: 'time_measure_input'%></td>
-		<td>:<%= f.text_field :seconds , class: 'time_measure_input'%></td>
-		<td>:<%= f.text_field :tenths , class: 'time_measure_input' %></td>
+		<td><%= f.text_field :minutes, class: 'time_measure_input'%>
+		:<%= f.text_field :seconds , class: 'time_measure_input'%>
+		:<%= f.text_field :tenths , class: 'time_measure_input' %></td>
 	</tr>
 
 	<tr>
 		<th> </th>
-		<th>min</th>
-		<th>sec</th>
-		<th>dec</th>
+		<th>min: sec: dec</th>
 	</tr>
-
-
 	<tr>
 		<th><%= submit_tag("Enviar") %></th>
 		<td></td>

@@ -7,10 +7,8 @@ class User < ApplicationRecord
  has_one :group
  has_many :comments
  has_many :ranking_lines
- has_many :videos
-
- 
- 
+ has_many :videos 
+ scope :pending, lambda { where(:is_accepted => false) }
 
  EMAIL_REGEX = /\A[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,4}\Z/i
 

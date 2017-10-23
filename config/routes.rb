@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   #rutas de goolgle para videos 
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/auth/failure', to: 'sessions#fail'
@@ -14,6 +15,13 @@ Rails.application.routes.draw do
     resources :groups
     resources :posts
     resources :videos, only: [:new, :index]
+    resources :documents
+    resources :students
+    resources :chat
+    get 'requests/index'
+    post 'requests/accept'
+    post 'requests/reject'
+
   end
 
   
