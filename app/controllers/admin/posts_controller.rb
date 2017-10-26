@@ -28,9 +28,11 @@ class Admin::PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
+    post_attributes = post_params
+    users_send_email = User.get_users_by_groups(post_attributes[:group_id])
     @post = Post.new(post_params)
-    
      if @post.save
+      #UserMailer.new_post(users_send_email).deliver
       redirect_to admin_posts_path
      else
       render 'new'
