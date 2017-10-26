@@ -1,10 +1,7 @@
 class UserMailer < ActionMailer::Base
   default from: "swimtecapp@gmail.com"
   
-  def new_post(users)
-    @users = users
-    @users.each do |user|
-      mail to: user.email, subject: "Sign Up Confirmation"
-    end  
+  def new_post(email)
+    mail to: email, subject: "[SWIMTEC] Hay una nueva noticia en el foro."  
   end
 end

@@ -1,0 +1,86 @@
+<% if  params[:action]  == 'new' %>
+<%= form_for @document , url: admin_documents_path(@document)do |f| %>
+  
+   <% if @document.errors.any? %>
+     <div id="error_explanation">
+       <h2>
+         <%= pluralize(@document.errors.count, "error") %> prohibited
+         this document from being saved:
+       </h2>
+       <ul>
+         <% @document.errors.full_messages.each do |msg| %>
+           <li><%= msg %></li>
+         <% end %>
+       </ul>
+     </div>
+   <% end %>
+  
+   <p>
+     <%= f.label :titulo %><br>
+     <%= f.text_field :title %>
+   </p>
+  
+  <p>
+     <%= f.label :grupo %><br>
+     <%=  f.collection_select :group_id, Group.all, :id, :name, include_blank: false  %> 
+  </p>
+   </p>
+
+   <p>
+     <%= f.label :cuerpo %><br>
+     <%= f.text_area :text %>
+   </p>
+  
+   <p>
+     <%= f.submit 'Crear Documento' %>
+   </p>
+  
+ <% end %>
+
+
+<!--
+
+
+codigo para form de edit
+
+
+-->
+<% else %>
+    <%= form_for @document , url: admin_document_path(@document)do |f| %>
+  
+   <% if @document.errors.any? %>
+     <div id="error_explanation">
+       <h2>
+         <%= pluralize(@document.errors.count, "error") %> prohibited
+         this document from being saved:
+       </h2>
+       <ul>
+         <% @document.errors.full_messages.each do |msg| %>
+           <li><%= msg %></li>
+         <% end %>
+       </ul>
+     </div>
+   <% end %>
+  
+   <p>
+     <%= f.label :title %><br>
+     <%= f.text_field :title %>
+   </p>
+
+   <p>
+     <%= f.label :grupo %><br>
+     <%=  f.collection_select :group_id, Group.all, :id, :name, include_blank: false  %> 
+  </p>
+  
+   <p>
+     <%= f.label :text %><br>
+     <%= f.text_area :text %>
+   </p>
+  
+   <p>
+     <%= f.submit 'Editar Documento' %>
+   </p>
+  
+ <% end %>
+
+<% end  %>
