@@ -32,7 +32,9 @@ class Admin::PostsController < ApplicationController
     users_send_email = User.get_users_by_groups(post_attributes[:group_id])
     @post = Post.new(post_params)
      if @post.save
-      #UserMailer.new_post(users_send_email).deliver
+      users_send_email.each do |user_email|
+        UserMailer.new_post(user_email.email).deliver
+      end
       redirect_to admin_posts_path
      else
       render 'new'
