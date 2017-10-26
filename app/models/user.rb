@@ -22,7 +22,9 @@ class User < ApplicationRecord
   validates_length_of :email, :maximum => 100
   validates_format_of :email, :with => EMAIL_REGEX, :message => "no es valido"
   validates_confirmation_of :email, :message => "no coincide"
-  validates_presence_of :password, :message => 'no puede estar en blanco'
+  #validates_presence_of :password, :message => 'no puede estar en blanco'
   has_secure_password
+
+  scope :get_users_by_groups, lambda {|group_id_search| where(:group_id =>group_id_search )}
           
 end
