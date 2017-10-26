@@ -42,15 +42,19 @@ class AccessController < ApplicationController
       end
     end
     if authorized_user
-      session[:user_id] = authorized_user.id
-      session[:email] = authorized_user.email
-      flash[:notice] = "Bienvenido!"
-      if authorized_user.is_admin
-        redirect_to admin_index_path
-      elsif Group.find(authorized_user.group_id).tip_group == 'Regular'
-        redirect_to user_index_path
-      elsif Group.find(authorized_user.group_id).tip_group == 'Equipo'
-        redirect_to team_index_path
+      if authorized_user.is_accepted
+        session[:user_id] = authorized_user.id
+        session[:email] = authorized_user.email
+        flash[:notice] = "Bienvenido!"
+        if authorized_user.is_admin
+          redirect_to admin_index_path
+        elsif Group.find(authorized_user.group_id).tip_group == 'Regular'
+          redirect_to user_index_path
+        elsif Group.find(authorized_user.group_id).tip_group == 'Equipo'
+          redirect_to team_index_path
+        end
+      else
+         redirect_to user_pending_index_path
       end
     else
       flash[:notice] = "Correo o contraseña inválida "

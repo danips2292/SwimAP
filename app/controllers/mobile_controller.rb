@@ -58,9 +58,7 @@ class MobileController < ApplicationController
 
   def addRanking 
      @ranking = RankingLine.new(ranking_params)
-     #binding.pry
-     @ranking.time = params[:ranking_line][:minutes]+params[:ranking_line][:seconds]+params[:ranking_line][:tenths]
-
+     @ranking.time = params[:ranking_line][:minutes]+":"+params[:ranking_line][:seconds]+":"+params[:ranking_line][:tenths]
     if @ranking.save
        redirect_to(:action => 'finishedRanking')
     end

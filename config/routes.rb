@@ -1,12 +1,31 @@
 Rails.application.routes.draw do
 
+  namespace :user do
+    get 'pending/index'
+  end
+
+  #rutas de goolgle para videos 
+  get '/auth/:provider/callback', to: 'sessions#create'
+  get '/auth/failure', to: 'sessions#fail'
+
+
   get 'team/index'
+  get 'user/fillForm'
+  get 'user/index'
 
   get 'admin/index'
   namespace :admin do
     resources :routines
     resources :groups
     resources :posts
+    resources :videos, only: [:new, :index]
+    resources :documents
+    resources :students
+    resources :chat
+    get 'requests/index'
+    post 'requests/accept'
+    post 'requests/reject'
+
   end
 
   
@@ -41,8 +60,7 @@ Rails.application.routes.draw do
 
 
   
-  get 'user/fillForm'
-  get 'user/index'
+
   match 'access/attempt_login' => 'access/attempt_login', via: [:get,:post]
 
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171013082219) do
+ActiveRecord::Schema.define(version: 20171023031429) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -159,9 +159,19 @@ ActiveRecord::Schema.define(version: 20171013082219) do
     t.string   "password_digest",        default: ""
     t.string   "full_name"
     t.boolean  "is_admin",               default: false, null: false
+    t.boolean  "is_accepted",            default: false, null: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["group_id"], name: "index_users_on_group_id", using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.integer  "user_id",    null: false
+    t.string   "link",       null: false
+    t.string   "comment",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_videos_on_user_id", using: :btree
   end
 
   add_foreign_key "assistances_users", "assistances"
