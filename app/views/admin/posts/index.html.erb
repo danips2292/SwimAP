@@ -1,0 +1,27 @@
+<h1>Noticias</h1>
+
+<table>
+ <tr>
+   <th>Titulo</th>
+   <th>Grupo</th>
+   <th>Cuerpo</th>
+    <th colspan="3"></th>
+ </tr>
+
+ <% @posts.each do |post| %>
+   <tr>
+     <td><%= post.title %></td>
+     <% if post.group_id != nil  %>
+        <td><%= Group.find(post.group_id).name %></td>
+    <% else %>
+        <td></td>
+    <%end%>
+     <td><%= post.text %></td>
+     <td><%= link_to image_tag("editIcon.png", class: 'edit_icon', border: 0), edit_admin_post_path(post) %></td>
+     <td><%= link_to image_tag("removeIcon.png", class: 'delete_icon', border: 0), admin_post_path(post),method: :delete,data: { confirm: 'Esta seguro?' } %>
+     	
+     </td>
+   </tr>
+ <% end %>
+
+ <%= link_to image_tag("newIcon.png", class: 'new_icon', border: 0), new_admin_post_path %>

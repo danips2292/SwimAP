@@ -1,0 +1,21 @@
+<p>Registrar nueva asistencia!</p>
+ <%= form_for(:assistance, :url => {:action => 'new_assistance'}) do |f| %>
+<table>
+  <tr>
+    <td> Identificacion de Asistencia </td>
+    <td> <%= f.text_field(:name) %> </td>
+  </tr>
+   <tr>
+    <td> Grupo </td>
+    <td>
+    <div class='select-style'>
+     <%=  f.collection_select :group_id, @groups, :id, :name, include_blank: true  %> 
+     </div>
+     </td>
+  </tr>
+  <tr>
+    <td> &nbsp; </td>
+    <td> <%= f.submit("Crear") %> </td>
+  </tr>
+</table>
+<%end%>
