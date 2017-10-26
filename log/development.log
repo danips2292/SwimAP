@@ -12228,3 +12228,198 @@ Processing by Admin::ChatController#index as HTML
 Completed 200 OK in 157ms (Views: 148.9ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/access/index" for 127.0.0.1 at 2017-10-25 21:49:18 -0600
+Processing by AccessController#index as HTML
+  Rendering access/index.html.erb within layouts/_login
+  Rendered access/index.html.erb within layouts/_login (7.8ms)
+Completed 200 OK in 24ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/index" for 127.0.0.1 at 2017-10-25 21:49:18 -0600
+Processing by AccessController#index as HTML
+  Rendering access/index.html.erb within layouts/_login
+  Rendered access/index.html.erb within layouts/_login (4.8ms)
+Completed 200 OK in 24ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-10-25 21:49:35 -0600
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M/riyZJV94PnON/0SZt6lyaD60e8wEV+d9GAOmgArvORyI6gu4CkPY6j82ZCe7RO9QCEPlnYfwHpcB+XvXforA==", "email"=>"alejaro34@gmail.com", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "alejaro34@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/user/pending/index
+Completed 302 Found in 116ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/user/pending/index" for 127.0.0.1 at 2017-10-25 21:49:35 -0600
+Processing by User::PendingController#index as HTML
+  Rendering user/pending/index.html.erb within layouts/_login
+  Rendered user/pending/index.html.erb within layouts/_login (5.6ms)
+Completed 200 OK in 27ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-10-25 21:49:57 -0600
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/_admin_partial
+  Rendered admin/index.html.erb within layouts/_admin_partial (0.6ms)
+  Rendered layouts/_top_nav_admin.html.erb (1.2ms)
+  Rendered layouts/_user_profile_logout.html.erb (0.8ms)
+Completed 200 OK in 205ms (Views: 195.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/requests/index" for 127.0.0.1 at 2017-10-25 21:49:59 -0600
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/_admin_partial
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."is_accepted" = $1 ORDER BY "users"."group_id" ASC[0m  [["is_accepted", "f"]]
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered admin/requests/index.html.erb within layouts/_admin_partial (34.6ms)
+  Rendered layouts/_top_nav_admin.html.erb (5.7ms)
+  Rendered layouts/_user_profile_logout.html.erb (0.7ms)
+Completed 200 OK in 190ms (Views: 174.8ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/access/signup" for 127.0.0.1 at 2017-10-25 21:50:33 -0600
+Processing by AccessController#signup as HTML
+  Rendering access/signup.html.erb within layouts/_login
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered access/signup.html.erb within layouts/_login (32.6ms)
+Completed 200 OK in 64ms (Views: 54.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/access/signup" for 127.0.0.1 at 2017-10-25 21:50:33 -0600
+Processing by AccessController#signup as HTML
+  Rendering access/signup.html.erb within layouts/_login
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered access/signup.html.erb within layouts/_login (9.3ms)
+Completed 200 OK in 33ms (Views: 26.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/access/new" for 127.0.0.1 at 2017-10-25 21:51:01 -0600
+Processing by AccessController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UIx7Hpi+wLafpmFaqdMi6HibfenFLUL/cklVqcDEKn9u5nbZrcoFJSGdrho1Yqavh79OYjVesVAWR1PvA0DJZg==", "user"=>{"full_name"=>"Daniel Se la Come.com", "email"=>"daniel@arroba.com", "email_confirmation"=>"daniel@arroba.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "group_id"=>"3"}, "commit"=>"Crear"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "daniel@arroba.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "group_id", "password_digest", "full_name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "daniel@arroba.com"], ["created_at", "2017-10-26 03:51:02.079391"], ["updated_at", "2017-10-26 03:51:02.079391"], ["group_id", 3], ["password_digest", "$2a$10$ppuAl6Q.JbxCE.o.WfQUD.T0a2NAic28Nd3wxjv4tK6Qeysf3hZN2"], ["full_name", "Daniel Se la Come.com"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/access/index
+Completed 302 Found in 144ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/access/index" for 127.0.0.1 at 2017-10-25 21:51:02 -0600
+Processing by AccessController#index as HTML
+  Rendering access/index.html.erb within layouts/_login
+  Rendered access/index.html.erb within layouts/_login (9.0ms)
+Completed 200 OK in 32ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-10-25 21:51:17 -0600
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/_admin_partial
+  Rendered admin/index.html.erb within layouts/_admin_partial (0.5ms)
+  Rendered layouts/_top_nav_admin.html.erb (1.4ms)
+  Rendered layouts/_user_profile_logout.html.erb (0.9ms)
+Completed 200 OK in 200ms (Views: 191.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/requests/index" for 127.0.0.1 at 2017-10-25 21:51:18 -0600
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/_admin_partial
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."is_accepted" = $1 ORDER BY "users"."group_id" ASC[0m  [["is_accepted", "f"]]
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered admin/requests/index.html.erb within layouts/_admin_partial (20.1ms)
+  Rendered layouts/_top_nav_admin.html.erb (1.0ms)
+  Rendered layouts/_user_profile_logout.html.erb (0.7ms)
+Completed 200 OK in 180ms (Views: 169.8ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/admin/requests/accept?id=21" for 127.0.0.1 at 2017-10-25 21:51:22 -0600
+Processing by Admin::RequestsController#accept as HTML
+  Parameters: {"authenticity_token"=>"zi/FNrCxw+3e6ddIEEI9ZMx2Fx/z9klb5fidEAUvTGPerreK4LFUDhgcFbLymos2tJaQS5DFjmnYIYwnI9GiVA==", "id"=>"21"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "daniel@arroba.com"], ["id", 21], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "is_accepted" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["is_accepted", "t"], ["updated_at", "2017-10-26 03:51:22.701634"], ["id", 21]]
+  [1m[35m (17.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/requests/index
+Completed 302 Found in 33ms (ActiveRecord: 20.4ms)
+
+
+Started GET "/admin/requests/index" for 127.0.0.1 at 2017-10-25 21:51:22 -0600
+Processing by Admin::RequestsController#index as HTML
+  Rendering admin/requests/index.html.erb within layouts/_admin_partial
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."is_accepted" = $1 ORDER BY "users"."group_id" ASC[0m  [["is_accepted", "f"]]
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered admin/requests/index.html.erb within layouts/_admin_partial (20.4ms)
+  Rendered layouts/_top_nav_admin.html.erb (1.0ms)
+  Rendered layouts/_user_profile_logout.html.erb (1.0ms)
+Completed 200 OK in 207ms (Views: 198.2ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-10-25 21:51:36 -0600
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hswtrtLp/a6TH68DI/H/pq/qeFvfcLZVchzrSKLDLK0k/kHH+zyuEPqEg5EoETF/fGkXIjpojCrsvXTld7Rq8g==", "email"=>"daniel@arroba.com", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "daniel@arroba.com"], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/user/index
+Completed 302 Found in 126ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/user/index" for 127.0.0.1 at 2017-10-25 21:51:37 -0600
+Processing by UserController#index as HTML
+  Rendering user/index.html.erb within layouts/_user_partial
+  Rendered user/index.html.erb within layouts/_user_partial (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendered layouts/_user_profile_logout.html.erb (2.6ms)
+  Rendered layouts/_top_nav_user.html.erb (10.4ms)
+Completed 200 OK in 210ms (Views: 202.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-10-25 21:51:59 -0600
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/_admin_partial
+  Rendered admin/index.html.erb within layouts/_admin_partial (0.8ms)
+  Rendered layouts/_top_nav_admin.html.erb (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendered layouts/_user_profile_logout.html.erb (1.7ms)
+Completed 200 OK in 194ms (Views: 182.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/chat" for 127.0.0.1 at 2017-10-25 21:52:01 -0600
+Processing by Admin::ChatController#index as HTML
+  Rendering admin/chat/index.html.erb within layouts/_admin_partial
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."is_accepted" = $1 ORDER BY "users"."group_id" ASC[0m  [["is_accepted", "t"]]
+  Rendered admin/chat/index.html.erb within layouts/_admin_partial (2.5ms)
+  Rendered layouts/_top_nav_admin.html.erb (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendered layouts/_user_profile_logout.html.erb (1.9ms)
+Completed 200 OK in 152ms (Views: 145.2ms | ActiveRecord: 0.7ms)
+
+
