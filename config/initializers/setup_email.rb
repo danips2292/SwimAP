@@ -3,7 +3,7 @@ ActionMailer::Base.smtp_settings =
     {
     address: "smtp.gmail.com",
     port: 587,
-    domain: "heroku.com",
+    domain: "swimtec.herokuapps.com",
     user_name: ENV["swimtecapp@gmail.com"],
     password: ENV["itcrapp2017"],
     authentication: "plain",
