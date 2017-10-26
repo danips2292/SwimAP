@@ -9,4 +9,4 @@ ActionMailer::Base.smtp_settings =
     authentication: "plain",
     openssl_verify_mode: 'none',
     enable_starttls_auto: true 
-    }  
+} 

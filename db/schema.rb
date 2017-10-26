@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171023031429) do
+ActiveRecord::Schema.define(version: 20171026051825) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,13 @@ ActiveRecord::Schema.define(version: 20171023031429) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
+  end
+
+  create_table "documents", force: :cascade do |t|
+    t.string  "title"
+    t.text    "text"
+    t.integer "group_id"
+    t.index ["group_id"], name: "index_documents_on_group_id", using: :btree
   end
 
   create_table "groups", force: :cascade do |t|
@@ -119,6 +126,30 @@ ActiveRecord::Schema.define(version: 20171023031429) do
     t.index ["user_id"], name: "index_initial_forms_on_user_id", using: :btree
   end
 
+  create_table "models", force: :cascade do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet     "current_sign_in_ip"
+    t.inet     "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.index ["email"], name: "index_models_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_models_on_reset_password_token", unique: true, using: :btree
+  end
+
+  create_table "noticia", force: :cascade do |t|
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -153,6 +184,10 @@ ActiveRecord::Schema.define(version: 20171023031429) do
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
     t.integer  "group_id"
@@ -177,6 +212,7 @@ ActiveRecord::Schema.define(version: 20171023031429) do
   add_foreign_key "assistances_users", "assistances"
   add_foreign_key "assistances_users", "users"
   add_foreign_key "comments", "users"
+  add_foreign_key "documents", "groups"
   add_foreign_key "posts", "groups"
   add_foreign_key "users", "groups"
 end
