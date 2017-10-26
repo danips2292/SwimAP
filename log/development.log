@@ -11540,3 +11540,211 @@ Processing by Admin::PostsController#index as HTML
 Completed 200 OK in 187ms (Views: 179.3ms | ActiveRecord: 1.7ms)
 
 
+Started GET "/admin/posts" for 127.0.0.1 at 2017-10-25 23:02:06 -0600
+Processing by Admin::PostsController#index as HTML
+  Rendering admin/posts/index.html.erb within layouts/_admin_partial
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered admin/posts/index.html.erb within layouts/_admin_partial (32.3ms)
+  Rendered layouts/_top_nav_admin.html.erb (0.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendered layouts/_user_profile_logout.html.erb (15.3ms)
+Completed 200 OK in 179ms (Views: 160.6ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/admin/posts/new" for 127.0.0.1 at 2017-10-25 23:02:09 -0600
+Processing by Admin::PostsController#new as HTML
+  Rendering admin/posts/new.html.erb within layouts/_admin_partial
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered admin/posts/_form.html.erb (5.5ms)
+  Rendered admin/posts/new.html.erb within layouts/_admin_partial (11.8ms)
+  Rendered layouts/_top_nav_admin.html.erb (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendered layouts/_user_profile_logout.html.erb (1.5ms)
+Completed 200 OK in 185ms (Views: 173.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admin/posts" for 127.0.0.1 at 2017-10-25 23:02:14 -0600
+Processing by Admin::PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZlROITgqHqbFRzcYxfS7jwVax74mhf0VJ1m0qsWntA7Znvy4ewRGyn+C+JQxo6f1uIaC9wpriU4UXwi+qEkiKg==", "post"=>{"title"=>"sadasdasda", "group_id"=>"4", "text"=>"asdasdasdasda"}, "commit"=>"Crear Noticia"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("created_at", "updated_at", "title", "text", "group_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-10-26 05:02:14.016661"], ["updated_at", "2017-10-26 05:02:14.016661"], ["title", "sadasdasda"], ["text", "asdasdasdasda"], ["group_id", 4]]
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."group_id" = $1[0m  [["group_id", 4]]
+  Rendering user_mailer/new_post.html.erb
+  Rendered user_mailer/new_post.html.erb (0.4ms)
+UserMailer#new_post: processed outbound mail in 38.7ms
+Sent mail to alejaro34@outlook.com (3402.2ms)
+Date: Wed, 25 Oct 2017 23:02:14 -0600
+From: swimtecapp@gmail.com
+To: alejaro34@outlook.com
+Message-ID: <59f16c5611dfc_1be12381d94606c7@unleashed.mail>
+Subject: [SWIMTEC] Nueva noticia Agregada a su Grupo!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+<p></p>
+
+
+
+
+Redirected to http://localhost:3000/admin/posts
+Completed 302 Found in 3462ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/admin/posts" for 127.0.0.1 at 2017-10-25 23:02:17 -0600
+Processing by Admin::PostsController#index as HTML
+  Rendering admin/posts/index.html.erb within layouts/_admin_partial
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered admin/posts/index.html.erb within layouts/_admin_partial (21.5ms)
+  Rendered layouts/_top_nav_admin.html.erb (1.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendered layouts/_user_profile_logout.html.erb (1.9ms)
+Completed 200 OK in 251ms (Views: 238.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/admin/posts/new" for 127.0.0.1 at 2017-10-25 23:03:24 -0600
+Processing by Admin::PostsController#new as HTML
+  Rendering admin/posts/new.html.erb within layouts/_admin_partial
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered admin/posts/_form.html.erb (9.6ms)
+  Rendered admin/posts/new.html.erb within layouts/_admin_partial (15.1ms)
+  Rendered layouts/_top_nav_admin.html.erb (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendered layouts/_user_profile_logout.html.erb (14.1ms)
+Completed 200 OK in 177ms (Views: 140.8ms | ActiveRecord: 7.6ms)
+
+
+Started POST "/admin/posts" for 127.0.0.1 at 2017-10-25 23:03:28 -0600
+Processing by Admin::PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OwSjRy+VS4SVU/1o23lUbUR2uC5dM387y2QOduT1Ri+EzhHebLsT6C+WMuQvLkgX+ar9Z3HdC2D4YrJiiRvQCw==", "post"=>{"title"=>"sdasdasdasdasdas", "group_id"=>"3", "text"=>"dasdasdasdsad"}, "commit"=>"Crear Noticia"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("created_at", "updated_at", "title", "text", "group_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-10-26 05:03:28.186139"], ["updated_at", "2017-10-26 05:03:28.186139"], ["title", "sdasdasdasdasdas"], ["text", "dasdasdasdsad"], ["group_id", 3]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."group_id" = $1[0m  [["group_id", 3]]
+  Rendering user_mailer/new_post.html.erb
+  Rendered user_mailer/new_post.html.erb (0.4ms)
+UserMailer#new_post: processed outbound mail in 62.4ms
+Sent mail to usuario2@gmail.com (2325.8ms)
+Date: Wed, 25 Oct 2017 23:03:28 -0600
+From: swimtecapp@gmail.com
+To: usuario2@gmail.com
+Message-ID: <59f16ca042c2c_1be12381c686072c@unleashed.mail>
+Subject: [SWIMTEC] Nueva noticia Agregada a su Grupo!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+<p>Este es el cuerpo</p>
+
+
+
+
+  Rendering user_mailer/new_post.html.erb
+  Rendered user_mailer/new_post.html.erb (0.1ms)
+UserMailer#new_post: processed outbound mail in 82.7ms
+Sent mail to usuario3@gmail.com (2382.2ms)
+Date: Wed, 25 Oct 2017 23:03:30 -0600
+From: swimtecapp@gmail.com
+To: usuario3@gmail.com
+Message-ID: <59f16ca2a721a_1be12381c686089@unleashed.mail>
+Subject: [SWIMTEC] Nueva noticia Agregada a su Grupo!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+<p>Este es el cuerpo</p>
+
+
+
+
+  Rendering user_mailer/new_post.html.erb
+  Rendered user_mailer/new_post.html.erb (0.1ms)
+UserMailer#new_post: processed outbound mail in 82.5ms
+Sent mail to usuario4@gmail.com (2285.7ms)
+Date: Wed, 25 Oct 2017 23:03:33 -0600
+From: swimtecapp@gmail.com
+To: usuario4@gmail.com
+Message-ID: <59f16ca52502d_1be12381c6860997@unleashed.mail>
+Subject: [SWIMTEC] Nueva noticia Agregada a su Grupo!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+<p>Este es el cuerpo</p>
+
+
+
+
+  Rendering user_mailer/new_post.html.erb
+  Rendered user_mailer/new_post.html.erb (0.1ms)
+UserMailer#new_post: processed outbound mail in 90.8ms
+Sent mail to usuario5@gmail.com (2465.1ms)
+Date: Wed, 25 Oct 2017 23:03:35 -0600
+From: swimtecapp@gmail.com
+To: usuario5@gmail.com
+Message-ID: <59f16ca78180f_1be12381c686105f@unleashed.mail>
+Subject: [SWIMTEC] Nueva noticia Agregada a su Grupo!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+<p>Este es el cuerpo</p>
+
+
+
+
+  Rendering user_mailer/new_post.html.erb
+  Rendered user_mailer/new_post.html.erb (0.1ms)
+UserMailer#new_post: processed outbound mail in 79.8ms
+Sent mail to kljks (1550.4ms)
+Date: Wed, 25 Oct 2017 23:03:38 -0600
+From: swimtecapp@gmail.com
+To: kljks
+Message-ID: <59f16caa12bdf_1be12381c6861114@unleashed.mail>
+Subject: [SWIMTEC] Nueva noticia Agregada a su Grupo!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+<p>Este es el cuerpo</p>
+
+
+
+
+Completed 500 Internal Server Error in 11445ms (ActiveRecord: 4.8ms)
+
+
+  
+Net::SMTPFatalError (553 5.1.2 The recipient address <kljks> is not a valid RFC-5321 address. y129sm1396666vkc.16 - gsmtp
+):
+  
+app/controllers/admin/posts_controller.rb:36:in `block in create'
+app/controllers/admin/posts_controller.rb:35:in `create'
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.5ms)
