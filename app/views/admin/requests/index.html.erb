@@ -4,6 +4,7 @@
 	<% @users.each do |user| %>
 		<tr>
 			<td><%= user.full_name %></td>
+			<td><%= Group.find(user.group_id).name %></td>
 			<td> <%= button_to( 'Acceptar', action: 'accept', id: user.id) %> </td>
 			<td> <%= button_to( 'Rechazar', action: 'reject', id: user.id) %> </td>
 		</tr>
