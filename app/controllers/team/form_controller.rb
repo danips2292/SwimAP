@@ -6,15 +6,13 @@ class Team::FormController < ApplicationController
 
   	if @form.nil?
   		@form = TeamForm.new({:user_id => session[:user_id]})
-      @form.update
+      @form.save
   	end
 
   end
 
   def register
-
   	@form = TeamForm.where(:user_id => session[:user_id].to_s).first
-
   	if @form.update(team_form_paramas)
   		flash[:notice] = "Formulario Actualizado Correctamente"
   		redirect_to team_form_index_path

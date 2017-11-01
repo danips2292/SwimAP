@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     resources :rankings, only: [:index]
     resources :chat do
       resources :messages
+    end
     get 'requests/index'
     post 'requests/accept'
     post 'requests/reject'

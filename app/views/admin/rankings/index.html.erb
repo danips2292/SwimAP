@@ -1,12 +1,12 @@
 <h1>Ranking</h1>
 <% if @rankings.blank? %>
-  <h4>There are no recipes containing the term.</h4>
+  <h4>No hay datos</h4>
 <% end %>  
 <%= form_tag(admin_rankings_path, :method => "get", id: "search-form") do %>
   <th>Estilo</th>
-  <%= select_tag :style, options_from_collection_for_select(RankingLine.all, :style, :style, params[:style]), include_blank: true %>
+  <%= select_tag :style, options_from_collection_for_select(RankingLine::STYLES, :to_s, :to_s, params[:style]), include_blank: true %>
   <th>Distancia</th>
-  <%= select_tag :distance, options_from_collection_for_select(RankingLine.all, :distance, :distance, params[:distance]), include_blank: true %>
+  <%= select_tag :distance, options_from_collection_for_select(RankingLine::DISTANCES, :to_s, :to_s, params[:distance]), include_blank: true %>
   <%= submit_tag "Buscar" , :name => nil %>
   <% end %>
 <table>
