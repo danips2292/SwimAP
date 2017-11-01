@@ -2,8 +2,6 @@ class Team::FormController < ApplicationController
 	layout 'layouts/_team_partial'
   def index
   	@form = TeamForm.where(:user_id => session[:user_id].to_s).first
-  	puts "---->" +  session[:user_id].to_s
-
   	if @form.nil?
   		@form = TeamForm.new({:user_id => session[:user_id]})
       @form.save

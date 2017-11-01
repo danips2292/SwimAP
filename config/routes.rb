@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'user/pending/index'
 
   get 'admin/index'
+  
   namespace :admin do
     resources :routines
     resources :groups
