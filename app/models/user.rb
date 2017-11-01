@@ -4,11 +4,13 @@ class User < ApplicationRecord
   #devise :database_authenticatable, :registerable,
   #:recoverable, :rememberable, :trackable, :validatable #,:confirmable
  has_one :initial_form
+ has_one :team_form
  has_one :group
  has_many :comments
  has_many :ranking_lines
  has_many :videos 
  has_many :conversations, :foreign_key => :sender_id
+
  
   scope :pending, lambda { where(:is_accepted => false).
                           order(:group_id) }

@@ -1,21 +1,15 @@
 class AccessController < ApplicationController
 	layout 'layouts/_login'
 
-
-
   def index
     check_session_state
   end
-
-
 
   def signup
     check_session_state
     @groups = Group.all
     @user = User.new
   end
-
-
 
   def new
     @user = User.new(user_params)
@@ -58,7 +52,7 @@ class AccessController < ApplicationController
       end
     else
       flash[:notice] = "Correo o contraseña inválida "
-      redirect_to(:action => 'login')
+      redirect_to access_index_path
     end
   end
 

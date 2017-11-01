@@ -2,10 +2,23 @@
 <html>
   <head>
     <title>SwimTEC | Administrador</title>
-    <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <link href="https://fonts.googleapis.com/css?family=Anton|Arvo|PT+Sans" rel="stylesheet">
+
+      <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  
+  <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' %>
+  
+  <%= csrf_meta_tags %>
+
+
   </head>
   <body>
     <div id="topcontent">
@@ -19,9 +32,10 @@
             </div>
           </div>
         </div>
+        
+        <div id='main_content' >
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
-        <div id='main_content' >
           <%= yield %>
         </div>
 
