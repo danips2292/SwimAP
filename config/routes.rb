@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     resources :documents
     resources :students
     resources :chat
+    resources :rankings, only: [:index]
     get 'requests/index'
     post 'requests/accept'
     post 'requests/reject'
