@@ -38,6 +38,7 @@ class MobileController < ApplicationController
     redirect_to(:action => 'finishedAssistance')
   end
 
+  #SECCION DE RANKING
 
   def ranking
     @team = Group.where(tip_group: "Equipo").first
@@ -64,6 +65,8 @@ class MobileController < ApplicationController
     end
 
   end
+
+# TERMINA SECCION DE RANKING
 
   def newComment
     @student =  User.find(params[:id])
