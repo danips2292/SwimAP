@@ -9,7 +9,6 @@ class InitialFormsController < ApplicationController
     	@user = User.where(email: current_user.email).first
     	@form.user_id = @user.id
     	redirect_to(:controller => 'user' , :action => 'index')
-
     end
 
   end
