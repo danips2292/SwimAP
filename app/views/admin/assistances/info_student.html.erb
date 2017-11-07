@@ -1,0 +1,22 @@
+<h1> Asistencia </h1>
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Presente</th>
+        <th colspan="3"></th>
+</tr>
+
+<% @students.each do |student| %>
+<tr>
+  <td><%= student.full_name %></td>
+  <td>
+    <% if (AssistancesUser.where(user_id: student.id).first.present) == true %>
+        Asistio
+    <% else %>
+        No asistio
+    <%end%>
+  </td>
+</tr> 
+<% end %>
+
+<td><%= link_to "Atras",admin_assistances_path %> </td>

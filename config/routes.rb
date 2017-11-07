@@ -19,13 +19,18 @@ Rails.application.routes.draw do
     resources :documents
     resources :students
     resources :rankings, only: [:index]
+    resources :assistances, only: [:index] do
+      collection do
+        get :info_student
+      end
+    end
     resources :chat do
       resources :messages
     end
+
     get 'requests/index'
     post 'requests/accept'
     post 'requests/reject'
-
   end
 
   namespace :team do
