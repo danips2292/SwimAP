@@ -23,10 +23,15 @@ Rails.application.routes.draw do
     resources :students
     resources :chat
     resources :rankings, only: [:index]
+    resources :assistances, only: [:index] do
+      collection do
+        get :info_student
+      end
+    end
+    
     get 'requests/index'
     post 'requests/accept'
     post 'requests/reject'
-
   end
 
   
