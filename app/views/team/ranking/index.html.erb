@@ -1,0 +1,29 @@
+<h1>Ranking</h1>
+<% if @rankings.blank? %>
+  <h4>No hay datos</h4>
+<% end %>  
+<%= form_tag(team_ranking_index_path, :method => "get", id: "search-form") do %>
+  <th>Estilo</th>
+  <%= select_tag :style, options_from_collection_for_select(RankingLine::STYLES, :to_s, :to_s, params[:style]), include_blank: true %>
+  <th>Distancia</th>
+  <%= select_tag :distance, options_from_collection_for_select(RankingLine::DISTANCES, :to_s, :to_s, params[:distance]), include_blank: true %>
+  <%= submit_tag "Buscar" , :name => nil %>
+  <% end %>
+<table>
+ <tr>
+   <th>Nombre</th>
+   <th>Estilo</th>
+   <th>Distancia</th>
+   <th>Tiempo</th>
+    <th colspan="3"></th>
+ </tr>
+
+ <% @rankings.each do |ranking| %>
+  <tr>
+    <td><%= User.find(ranking.user_id).full_name %></rd>
+    <td><%= ranking.style %></td>
+    <td><%= ranking.distance %></td> 
+    <td><%= ranking.time %></td>   
+  </tr>
+<% end %>
+
