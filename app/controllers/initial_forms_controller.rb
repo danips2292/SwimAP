@@ -16,7 +16,7 @@ class InitialFormsController < ApplicationController
 
   def form_params
 		params.require(:initial_form).permit(:legal_id, 
-			:tec_id, :name, :carreer, :start_year, :gender,
+			:tec_id, :carreer, :gender,
 			 :birth_date, :workplace, :study_address, :father_name, 
 			 :mother_name, :home_address, :accident_name, 
 			 :accident_telephone, :accident_comment, :accident_address, 

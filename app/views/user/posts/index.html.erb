@@ -1,0 +1,11 @@
+<h1>Noticias</h1>
+
+
+ <% @posts.each do |post| %>
+ 	<div class='post'>
+ 	<span class='post_title'> <%= post.title %> </span><br>
+
+ 	<span class='post_body'><%= post.text %> </span><br>
+ 	<span class='post_date'> <%= distance_of_time_in_words(@from_time, post.updated_at)  %> ago</span><br>
+ 	</div>
+ <% end %>

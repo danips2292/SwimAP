@@ -1,0 +1,19 @@
+<h1> Videos </h1>
+<h4>Cuota Disponible: <%= @remaining %>%</h4>
+<p>Los videos son almacenados en una cuenta propia de Dropbox.
+Esta cuenta tiene 2GB de almacenamiento. Por lo que se recomienda vigilar la cuota disponible. 
+</p>
+
+
+<%= form_tag(admin_videos_upload_path, multipart: true) do %>
+   <div class="field">
+    <h3> <%= "Video-Comentario para "+User.find(params[:id]).full_name %></h3>
+     <%= hidden_field_tag 'user_id', params[:id]  %>
+     <h4> Comentario </h4> <%= text_area_tag :comment, nil, rows: 50, cols: 50%>
+     <br>
+     <%= file_field_tag :file %>
+   </div>
+   <div class="actions">
+      <%= submit_tag 'Submit' %>
+   </div>
+<% end %>

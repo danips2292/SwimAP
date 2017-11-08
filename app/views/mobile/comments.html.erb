@@ -1,16 +1,18 @@
 <p>Selecciona primero el Grupo</p>
 <table>
+	<tr>
 	<th>ID</th>
 	<th>Nombre</th>
 	<th>Horario</th>
 	<th></th>
-	<% @groups.each do |group| %>
-	<tr>
-	<td><%= group.id %></td>
-	<td><%= group.name %></td>
-	<td><%= group.schedule %></td>
-	<td><%= link_to  'Seleccionar', action: 'selectStudent', id: group.id %></td>
 	</tr>
+	<% @groups.each do |group| %>
+		<tr>
+			<td><%= group.id %></td>
+			<td><%= group.name %></td>
+			<td><%= group.schedule %></td>
+			<td><%= link_to  'Seleccionar', action: 'selectStudent', id: group.id %></td>
+		</tr>
 
 <%end %>
 

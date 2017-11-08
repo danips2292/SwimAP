@@ -1,0 +1,15 @@
+<h1> Videos </h1>
+<h4>Cuota Disponible: <%= @remaining %>%</h4>
+<p>Los videos son almacenados en una cuenta propia de Dropbox.
+Esta cuenta tiene 2GB de almacenamiento. Por lo que se recomienda vigilar la cuota disponible. 
+</p>
+<br>
+<h3>Seleccione el Estudiante</h3>
+<table>
+<% @students.each do |student| %>
+	<tr>
+	<td><%= student.full_name %></td>
+	<td> <%= link_to( 'Seleccionar', action: 'newVideo', id: student.id) %> </td>
+	</tr>
+<%end%>
+</table>

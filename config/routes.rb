@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
 
+  namespace :user do
+    get 'chat/index'
+    get 'videos/index'
+    get 'comments/index'
+    get 'assistances/index'
+    get 'posts/index'
+    post 'register'
+    patch 'register'
+  end
+
   #rutas de goolgle para videos 
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/auth/failure', to: 'sessions#fail'
@@ -15,7 +25,7 @@ Rails.application.routes.draw do
     resources :routines
     resources :groups
     resources :posts
-    resources :videos, only: [:new, :index]
+    resources :videos, only: [:index]
     resources :documents
     resources :students
     resources :rankings, only: [:index]
@@ -25,6 +35,11 @@ Rails.application.routes.draw do
     get 'requests/index'
     post 'requests/accept'
     post 'requests/reject'
+    post 'videos/upload'
+
+    get 'videos/selectStudent/:id' => 'videos#selectStudent'
+    get 'videos/newVideo/:id' => 'videos#newVideo'
+    get 'videos/view/:id' => 'videos#view'
 
   end
 
