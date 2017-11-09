@@ -2,6 +2,9 @@ class Admin::GroupsController < ApplicationController
 layout 'layouts/_admin_partial'
 
   before_action :set_group, only: [:show, :edit, :update, :destroy]
+   before_action :confirm_logged_in
+  before_action :validates_admin_access
+ 
 
   # GET /groups
   # GET /groups.json

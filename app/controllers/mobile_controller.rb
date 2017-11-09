@@ -1,5 +1,5 @@
 class MobileController < ApplicationController
-
+  
   layout 'layouts/_mobile'
 
   def assistance

@@ -1,6 +1,9 @@
 class Admin::PostsController < ApplicationController
   layout 'layouts/_admin_partial'
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+   before_action :confirm_logged_in
+  before_action :validates_admin_access
+ 
 
   # GET /posts
   # GET /posts.json

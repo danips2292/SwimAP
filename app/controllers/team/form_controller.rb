@@ -1,5 +1,8 @@
 class Team::FormController < ApplicationController
 	layout 'layouts/_team_partial'
+  before_action :confirm_logged_in
+  before_action :validates_team_access
+  
   def index
   	@form = TeamForm.where(:user_id => session[:user_id].to_s).first
   	if @form.nil?
