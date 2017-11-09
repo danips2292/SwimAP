@@ -34,7 +34,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'private_pub'
 gem 'thin'
-
+gem 'rails-erd'
+gem 'dropbox_api'
+gem 'carrierwave'
 
 #Devise for Rails
 #gem 'devise'

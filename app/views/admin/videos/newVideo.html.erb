@@ -1,0 +1,45 @@
+<h1> Videos </h1>
+<%= form_tag(admin_videos_upload_path, multipart: true) do %>
+   <div class="field">
+    <h3> <%= "Video-Comentario para "+User.find(params[:id]).full_name %></h3>
+     <%= hidden_field_tag 'user_id', params[:id]  %>
+     <h4> Comentario </h4> <%= text_area_tag :comment, nil, rows: 50, cols: 50%>
+     <br>
+     <%= file_field_tag :file %>
+   </div>
+   <div class="actions">
+      <%= submit_tag 'Submit' %>
+   </div>
+<% end %>
+
+<h3> Otros videos de <%= User.find(params[:id]).full_name  %></h3>
+
+
+<% if @videos.size == 0 %>
+  <h4><%= "No hay videos que mostrar" %> </h4>
+<% else %>
+  <% @videos.each do |video| %>
+    <div class='video-item'>
+      <video  class='video-frame' width="512" height="288" controls="controls">
+        <source src='<%= video.link%>' type="video/mp4" />
+      </video>
+      <div class='video-content'>
+      <h4>Información del video</h4>
+        <table>
+        <tr>
+        <th> Comentario </th>
+        <td><%= video.comment %></td>
+        </tr>
+        <tr>
+        <th><%= link_to 'Link', video.link[0,video.link .size-1]+'0' %> </th>
+        <td><%= distance_of_time_in_words(Time.now, video.updated_at) %> ago</td>
+        </tr>
+        </table>
+      </div>
+
+    </div>
+
+  <% end %>
+
+
+<% end %>

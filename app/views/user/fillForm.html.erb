@@ -1,9 +1,7 @@
 <h1>Formulario de Información Médica</h1>
-<p>Por favor llene la información requerida</p>
-
-
-<%= form_for (:initial_form), :url => {:controller  => 'initial_forms' , :action => 'register'} do |m| %>
-
+<p>Por favor complete este formulario. Una vez terminado persione 'Guardar'.</p>
+<%= form_for (@form), :url => {:action => 'register'} do |m| %>
+	<%= m.hidden_field :user_id, :value => session[:user_id] %>
 	<%=  render partial: 'initial_form', :locals => {:m => m}  %>
 	<%= submit_tag( "Guardar") %>
 <%end%>
