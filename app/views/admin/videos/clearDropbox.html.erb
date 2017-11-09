@@ -1,0 +1,21 @@
+<h1> Videos </h1>
+<h4>Vaciar carpeta de videos en Dropbox</h4>
+<p>Para confirmar la operación, escriba el código que aparace abajo en el recuadro</p>
+
+<%= form_tag(:action => 'clear') do %>
+<%= hidden_field_tag :original, @random %>
+<table>
+<tr>
+	<td> Su código</td>
+	<td> <%= @random  %></td>
+	<td> </td>
+	</tr>
+
+	<tr>
+	<td> Ingrese el código de confirmación </td>
+	<td> <%= text_field_tag :user_input  %></td>
+	<td> <%= submit_tag("Confirmar y Borrar") %> </td>
+	</tr>
+
+<%end %>
+</table>

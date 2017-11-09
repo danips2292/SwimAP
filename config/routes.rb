@@ -36,10 +36,11 @@ Rails.application.routes.draw do
     post 'requests/accept'
     post 'requests/reject'
     post 'videos/upload'
-
+    get 'videos/clearDropbox'
+    post 'videos/clear'
     get 'videos/selectStudent/:id' => 'videos#selectStudent'
     get 'videos/newVideo/:id' => 'videos#newVideo'
-    get 'videos/view/:id' => 'videos#view'
+    
 
   end
 

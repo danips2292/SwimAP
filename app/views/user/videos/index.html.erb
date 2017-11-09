@@ -1,2 +1,34 @@
-<h1>User::Videos#index</h1>
-<p>Find me in app/views/user/videos/index.html.erb</p>
+<h1>Videos</h1>
+ <link href="http://vjs.zencdn.net/6.2.8/video-js.css" rel="stylesheet">
+
+  <!-- If you'd like to support IE8 -->
+  <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+  <script src="http://vjs.zencdn.net/6.2.8/video.js"></script>
+<% if @videos.size == 0 %>
+	<h3><%= "No hay videos que mostrar" %> </h3>
+<% else %>
+	<% @videos.each do |video| %>
+		<div class='video-item'>
+			<video  class='video-frame' width="512" height="288" controls="controls">
+				<source src='<%= video.link%>' type="video/mp4" />
+			</video>
+			<div class='video-content'>
+			<h4>Información del video</h4>
+				<table>
+				<tr>
+				<th> Comentario </th>
+				<td><%= video.comment %></td>
+				</tr>
+				<tr>
+				<th><%= link_to 'Link', video.link[0,video.link .size-1]+'0' %> </th>
+				<td><%= distance_of_time_in_words(Time.now, video.updated_at) %> ago</td>
+				</tr>
+				</table>
+			</div>
+
+		</div>
+
+	<% end %>
+
+
+<% end %>
