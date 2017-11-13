@@ -23,9 +23,9 @@ class Admin::VideosController < ApplicationController
     rescue DropboxApi::Errors::SharedLinkAlreadyExistsError
       flash[:notice]= 'Error: Un video con ese mismo nombre ya estaba almacenado'
       redirect_to admin_videos_path
-    rescue Exception
-      flash[:notice]= 'Error: Se ha producido un problema. Por favor intente de nuevo'
-      redirect_to admin_videos_path
+    #rescue Exception
+      #flash[:notice]= 'Error: Se ha producido un problema. Por favor intente de nuevo'
+      #redirect_to admin_videos_path
     end
 
 

@@ -8169,3 +8169,14 @@ Processing by AccessController#index as HTML
 Completed 200 OK in 31ms (Views: 27.6ms | ActiveRecord: 0.0ms)
 
 
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAssistancesUser Load (0.3ms)[0m  [1m[34mSELECT  "assistances_users".* FROM "assistances_users" WHERE "assistances_users"."assistance_id" = $1 AND "assistances_users"."user_id" = $2 LIMIT $3[0m  [["assistance_id", 2], ["user_id", 23], ["LIMIT", 1]]
+  [1m[36mAssistancesUser Load (0.8ms)[0m  [1m[34mSELECT  "assistances_users".* FROM "assistances_users" WHERE "assistances_users"."assistance_id" = $1 AND "assistances_users"."user_id" = $2 LIMIT $3[0m  [["assistance_id", 2], ["user_id", 23], ["LIMIT", 1]]
+  [1m[36mAssistancesUser Load (0.4ms)[0m  [1m[34mSELECT "assistances_users".* FROM "assistances_users" WHERE "assistances_users"."assistance_id" = $1 AND "assistances_users"."user_id" = $2[0m  [["assistance_id", 2], ["user_id", 23]]
+  [1m[36mAssistancesUser Load (0.3ms)[0m  [1m[34mSELECT "assistances_users".* FROM "assistances_users" WHERE "assistances_users"."assistance_id" = $1 AND "assistances_users"."user_id" = $2[0m  [["assistance_id", 1], ["user_id", 23]]
+  [1m[36mAssistancesUser Load (0.7ms)[0m  [1m[34mSELECT "assistances_users".* FROM "assistances_users" WHERE "assistances_users"."assistance_id" = $1 AND "assistances_users"."user_id" = $2[0m  [["assistance_id", 4], ["user_id", 23]]
+  [1m[36mAssistancesUser Load (0.7ms)[0m  [1m[34mSELECT  "assistances_users".* FROM "assistances_users" WHERE "assistances_users"."assistance_id" = $1 AND "assistances_users"."user_id" = $2 LIMIT $3[0m  [["assistance_id", 4], ["user_id", 23], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mAssistance Load (0.7ms)[0m  [1m[34mSELECT "assistances".* FROM "assistances" WHERE "assistances"."group_id" = $1[0m  [["group_id", 1]]
+  [1m[36mAssistancesUser Load (0.7ms)[0m  [1m[34mSELECT  "assistances_users".* FROM "assistances_users" WHERE "assistances_users"."assistance_id" = $1 AND "assistances_users"."user_id" = $2 LIMIT $3[0m  [["assistance_id", 4], ["user_id", 23], ["LIMIT", 1]]
+  [1m[36mAssistancesUser Load (0.6ms)[0m  [1m[34mSELECT  "assistances_users".* FROM "assistances_users" WHERE "assistances_users"."assistance_id" = $1 AND "assistances_users"."user_id" = $2 LIMIT $3[0m  [["assistance_id", 5], ["user_id", 23], ["LIMIT", 1]]
