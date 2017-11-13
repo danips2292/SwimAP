@@ -9,9 +9,9 @@
 
 User.create(full_name: 'Lizbeth Sanchez Perez', email: 'email1@gmail.com', password: '1234', is_admin: true, is_accepted: true )
 
-Group.create(:name 'Equipo', :tip_group 'Equipo', :schedule '' )
-Group.create(:name 'Grupo 1', :tip_group 'Regular', :schedule 'Lunes 7:am 9:20am' )
-Group.create(:name 'Grupo 2', :tip_group 'Regular', :schedule 'Martes 7:am 9:20am' )
+Group.create(name: 'Equipo',  tip_group:'Equipo', schedule: '' )
+Group.create(name: 'Grupo 1', tip_group: 'Regular', schedule: 'Lunes 7:am 9:20am' )
+Group.create(name: 'Grupo 2', tip_group: 'Regular', schedule: 'Martes 7:am 9:20am' )
 
 team = Group.where(tip_group: 'Equipo').first
 
