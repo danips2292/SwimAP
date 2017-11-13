@@ -6,8 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
-User.create(full_name: 'Lizbeth Sanchez Perez', email: 'email1@gmail.com', password: '1234', is_admin: true, is_accepted: true )
+#
+#heroku pg:reset DATABASE_URL   #Literally type in heroku pg:reset DATABASE_URL
+#heroku rake db:migrate
+#
+User.create(full_name: 'Lizbeth Sanchez Perez', email: 'email0@gmail.com', password: '1234', is_admin: true, is_accepted: true )
 
 Group.create(name: 'Equipo',  tip_group:'Equipo', schedule: '' )
 Group.create(name: 'Grupo 1', tip_group: 'Regular', schedule: 'Lunes 7:am 9:20am' )
