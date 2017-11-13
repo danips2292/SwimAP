@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
 
   def validates_user_access
     group = Group.find(User.find(session[:user_id]).group_id)
-    if group.tip_group == 'Regular'
+    if group.nil? == false && group.tip_group == 'Regular'
       return true
     else
       flash[:notice] = "Acceso denegado"
@@ -32,7 +32,7 @@ class ApplicationController < ActionController::Base
 
   def validates_admin_access
     user = User.find(session[:user_id])
-    if user.is_admin
+    if user.nil? == false && user.is_admin
       return true
     else
       flash[:notice] = "Acceso denegado"
@@ -44,7 +44,7 @@ class ApplicationController < ActionController::Base
 
   def validates_team_access
     group = Group.find(User.find(session[:user_id]).group_id)
-    if group.tip_group == 'Equipo'
+    if group.nil? == false && group.tip_group == 'Equipo'
       return true
     else
       flash[:notice] = "Acceso denegado"
