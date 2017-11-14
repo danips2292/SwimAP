@@ -91,6 +91,10 @@ Rails.application.routes.draw do
   get 'access/index'
   post 'access/new'
   post 'access/logout'
+  get 'access/recover'
+  post 'access/recover_account'
+  get 'access/token'
+  post 'access/update_account'
 
 
   

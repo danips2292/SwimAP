@@ -1,0 +1,36 @@
+<%= image_tag 'bg.jpeg', height:'100', :id => "bg" %>
+<div class="outer_frame">
+  <div class="middle_frame">
+     <div class ="login">
+      <%= image_tag 'logo.png', height:'50', class:'logo'%>
+      <div class='form_container'>
+      <H2> Recuperación de Cuenta </H2>
+    <p> Ingrese el código de 5 digitos que enviamos a su correo y su nueva contraseña. </p>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+          <%= form_tag(:action => 'update_account') do %>
+          <%= hidden_field_tag :token10, params[:token] %>
+            <table>
+              <tr>
+                <td> Código </td>
+                <td> <%= text_field_tag(:token5) %> </td>
+              </tr>
+               <tr>
+                <td> Nueva Contraseña </td>
+                <td> <%= text_field_tag(:new_pass) %> </td>
+              </tr>
+              <tr>
+                <td> Repita la Contraseña </td>
+                <td> <%= text_field_tag(:verify_pass) %> </td>
+              </tr>
+              <tr>
+                <td> &nbsp; </td>
+                <td> <%= submit_tag("Enviar") %> </td>
+              </tr>
+            </table>
+            <%end%>
+      </div>
+
+    </div>
+  </div>
+</div>
