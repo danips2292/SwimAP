@@ -1,5 +1,5 @@
 class Admin::MessagesController < ApplicationController
-   before_action :confirm_logged_in
+  before_action :confirm_logged_in
   before_action :validates_admin_access
  
 def create

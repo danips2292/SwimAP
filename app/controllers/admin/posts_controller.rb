@@ -1,7 +1,7 @@
 class Admin::PostsController < ApplicationController
   layout 'layouts/_admin_partial'
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-   before_action :confirm_logged_in
+  before_action :confirm_logged_in
   before_action :validates_admin_access
  
 
@@ -31,12 +31,14 @@ class Admin::PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
+    subject = '[SWIMTEC] Nueva noticia en su grupo!'
+    body = 'Una nueva noticia ha sido agregada a su grupo. Puede acceder a swimtec.herokuapp.com para revisarla'
     post_attributes = post_params
     users_send_email = User.get_users_by_groups(post_attributes[:group_id])
     @post = Post.new(post_params)
      if @post.save
       users_send_email.each do |user_email|
-        UserMailer.new_post(user_email.email).deliver
+        UserMailer.new_email(user_email.email, subject, body).deliver
       end
       redirect_to admin_posts_path
      else

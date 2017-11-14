@@ -5,4 +5,6 @@ class Assistance < ApplicationRecord
 		where(group_id: group_id)		
 	end
 
+	scope :byGroupId, -> (id) {where(group_id: id)}
+
 end

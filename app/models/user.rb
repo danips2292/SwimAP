@@ -12,13 +12,13 @@ class User < ApplicationRecord
  has_many :conversations, :foreign_key => :sender_id , :dependent => :nullify
 
  
-  scope :pending, lambda { where(:is_accepted => false).
+  scope :pending, lambda { where(:is_accepted => false, :is_admin => false).
                           order(:group_id) }
 
-  scope :accepted, lambda { where(:is_accepted => true).  order(:group_id)}
+  scope :accepted, lambda { where(:is_accepted => true, :is_admin => false).  order(:group_id)}
 
-  scope :accepted_by_group, lambda { |id| where(:group_id => id).
-                                      where(:is_accepted => true).
+  scope :accepted_by_group, lambda { |id| where(:group_id => id, 
+                                        :is_accepted => true, :is_admin => false).
                                       order(:group_id)}
 
  EMAIL_REGEX = /\A[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,4}\Z/i

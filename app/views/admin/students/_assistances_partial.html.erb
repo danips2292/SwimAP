@@ -1,0 +1,26 @@
+<table> 
+<tr> <th> Identificador </th> <th> Fecha </th> <th> Presente</th></tr>
+<% assistancesGroup.each do |assistance| %>
+	
+	<tr> <td> <%= assistance.name %>  </td>
+		<td> 
+		<%=  AssistancesUser.where(assistance_id: assistance.id).first.updated_at.to_date %>  
+
+		</td>
+		<td>
+		<%  if AssistancesUser.where(assistance_id: assistance.id, user_id: student.id).first.nil? == false && AssistancesUser.where(assistance_id: assistance.id, user_id: student.id).first.present %>
+			<%= "Si" %>
+			<% else %>
+
+			<%= "No" %>
+
+				<%if AssistancesUser.where(assistance_id: assistance.id, user_id: student.id).first.nil?%>
+				(Sin Registro)
+				 <%end %>
+			<%end %>
+		</td>
+	</tr>
+<% end %>
+
+</table>
+<p>*Sin Registro significa que en el momento que la asistencia fue tomada, el usuario no existia aun o no habia sido aprobado aun.  </p>

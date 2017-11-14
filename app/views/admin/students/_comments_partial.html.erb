@@ -1,0 +1,6 @@
+ <% comments.each do |comment| %>
+ 	<div class='post'>
+ 	<span class='post_body'><%= comment.description %> </span><br>
+ 	<span class='post_date'> <%= distance_of_time_in_words(@from_time, comment.updated_at)  %> ago</span><br>
+ 	</div>
+ <% end %>
