@@ -11599,3 +11599,674 @@ Processing by Rails::MailersController#index as HTML
 Completed 200 OK in 20ms (Views: 9.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-11-14 14:18:43 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AccessController#index as HTML
+  Rendering access/index.html.erb within layouts/_login
+  Rendered access/index.html.erb within layouts/_login (253.6ms)
+Completed 200 OK in 291ms (Views: 274.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/recover" for 127.0.0.1 at 2017-11-14 14:18:53 -0600
+Processing by AccessController#recover as HTML
+  Rendering access/recover.html.erb within layouts/_login
+  Rendered access/recover.html.erb within layouts/_login (4.4ms)
+Completed 200 OK in 18ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/recover" for 127.0.0.1 at 2017-11-14 14:20:04 -0600
+Processing by AccessController#recover as HTML
+  Rendering access/recover.html.erb within layouts/_login
+  Rendered access/recover.html.erb within layouts/_login (9.6ms)
+Completed 200 OK in 36ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/signup" for 127.0.0.1 at 2017-11-14 14:20:07 -0600
+Processing by AccessController#signup as HTML
+  Rendering access/signup.html.erb within layouts/_login
+  [1m[36mGroup Load (1.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered access/signup.html.erb within layouts/_login (27.9ms)
+Completed 200 OK in 95ms (Views: 36.6ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-14 14:20:11 -0600
+Processing by AccessController#index as HTML
+  Rendering access/index.html.erb within layouts/_login
+  Rendered access/index.html.erb within layouts/_login (10.4ms)
+Completed 200 OK in 46ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/recover" for 127.0.0.1 at 2017-11-14 14:20:17 -0600
+Processing by AccessController#recover as HTML
+  Rendering access/recover.html.erb within layouts/_login
+  Rendered access/recover.html.erb within layouts/_login (4.7ms)
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/recover" for 127.0.0.1 at 2017-11-14 14:22:22 -0600
+Processing by AccessController#recover as HTML
+  Rendering access/recover.html.erb within layouts/_login
+  Rendered access/recover.html.erb within layouts/_login (7.4ms)
+Completed 200 OK in 47ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/recover" for 127.0.0.1 at 2017-11-14 14:59:12 -0600
+  
+SyntaxError (/media/ale/Datos/Universidad/2017 - 2/Proyecto/SwimAP/app/controllers/access_controller.rb:78: syntax error, unexpected tLABEL
+      redirect_to (action: 'token', token: @user.reset_...
+                          ^
+/media/ale/Datos/Universidad/2017 - 2/Proyecto/SwimAP/app/controllers/access_controller.rb:78: syntax error, unexpected ',', expecting keyword_end
+...  redirect_to (action: 'token', token: @user.reset_password_...
+...                               ^
+/media/ale/Datos/Universidad/2017 - 2/Proyecto/SwimAP/app/controllers/access_controller.rb:78: syntax error, unexpected ')', expecting keyword_end
+/media/ale/Datos/Universidad/2017 - 2/Proyecto/SwimAP/app/controllers/access_controller.rb:104: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/access_controller.rb:78: syntax error, unexpected tLABEL
+app/controllers/access_controller.rb:78: syntax error, unexpected ',', expecting keyword_end
+app/controllers/access_controller.rb:78: syntax error, unexpected ')', expecting keyword_end
+app/controllers/access_controller.rb:104: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (41.5ms)
+Started GET "/access/recover" for 127.0.0.1 at 2017-11-14 14:59:48 -0600
+Processing by AccessController#recover as HTML
+  Rendering access/recover.html.erb within layouts/_login
+  Rendered access/recover.html.erb within layouts/_login (10.7ms)
+Completed 200 OK in 39ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/recover_account" for 127.0.0.1 at 2017-11-14 14:59:56 -0600
+Processing by AccessController#recover_account as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MkOS87raofYii83DeAd05VylihSIq2AQ8+p6gJSxpTlrZAsGcekKo8lc6ATnBCQ0VhgBa7TNPKxDgQKdn3X92A==", "email"=>"alejaro34@gmail.com", "commit"=>"Enviar"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "alejaro34@gmail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 11.4ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/access_controller.rb:77:in `recover_account'
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.0ms)
+Started POST "/access/recover_account" for 127.0.0.1 at 2017-11-14 15:01:54 -0600
+Processing by AccessController#recover_account as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MkOS87raofYii83DeAd05VylihSIq2AQ8+p6gJSxpTlrZAsGcekKo8lc6ATnBCQ0VhgBa7TNPKxDgQKdn3X92A==", "email"=>"alejaro34@gmail.com", "commit"=>"Enviar"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "alejaro34@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "alejaro34@gmail.com"], ["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/access/token
+Completed 302 Found in 49ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/access/token" for 127.0.0.1 at 2017-11-14 15:01:54 -0600
+Processing by AccessController#token as HTML
+  Rendering access/token.html.erb within layouts/_login
+  Rendered access/token.html.erb within layouts/_login (9.8ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"update_account", :controller=>"access"}):
+     8:     <p> Ingrese el código de 5 digitos que enviamos a su correo. </p>
+     9:         <p class="notice"><%= notice %></p>
+    10:         <p class="alert"><%= alert %></p>
+    11:           <%= form_tag(:action => 'update_account') do %>
+    12:           <%= hidden_field_tag :original, params[:token] %>
+    13:             <table>
+    14:               <tr>
+  
+app/views/access/token.html.erb:11:in `_app_views_access_token_html_erb___1317305505247850291_70110479259320'
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.1ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "alejaro34@gmail.com"], ["LIMIT", 1]]
+Started GET "/access/recover" for 127.0.0.1 at 2017-11-14 15:08:55 -0600
+Processing by AccessController#recover as HTML
+  Rendering access/recover.html.erb within layouts/_login
+  Rendered access/recover.html.erb within layouts/_login (5.3ms)
+Completed 200 OK in 19ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/recover_account" for 127.0.0.1 at 2017-11-14 15:09:01 -0600
+Processing by AccessController#recover_account as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CkxLpq8rEU9OJT9NJmnS0P70vDL2OhRdUekakipAFNBTa9JTZBi6GqXyGoq5aoIB9Ek3TcpcSOHhgmKPIYRMMQ==", "email"=>"alejaro34@gmail.com", "commit"=>"Enviar"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "alejaro34@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "alejaro34@gmail.com"], ["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/access/token?token=2017-11-13+00%3A00%3A00+UTC
+Completed 302 Found in 45ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/access/token?token=2017-11-13+00%3A00%3A00+UTC" for 127.0.0.1 at 2017-11-14 15:09:01 -0600
+Processing by AccessController#token as HTML
+  Parameters: {"token"=>"2017-11-13 00:00:00 UTC"}
+  Rendering access/token.html.erb within layouts/_login
+  Rendered access/token.html.erb within layouts/_login (6.2ms)
+Completed 200 OK in 25ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "alejaro34@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "alejaro34@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2392004220659158560);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddRecoveryToUsers (20171114211159)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.7ms)[0m  [1m[35mALTER TABLE "users" ADD "token5" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "token10" character varying[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171114211159"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2392004220659158560)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/access/recover" for 127.0.0.1 at 2017-11-14 15:13:38 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AccessController#recover as HTML
+  Rendering access/recover.html.erb within layouts/_login
+  Rendered access/recover.html.erb within layouts/_login (5.1ms)
+Completed 200 OK in 20ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/recover_account" for 127.0.0.1 at 2017-11-14 15:13:41 -0600
+Processing by AccessController#recover_account as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/mpQVDKLvzaYfkc6LOQ+NVot/1W57vR+/VDow262y62nTcmh+bgUY3OpYv2z527kUJB0KoWIqMJNO5DeZXKTTA==", "email"=>"alejaro34@gmail.com", "commit"=>"Enviar"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "alejaro34@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "alejaro34@gmail.com"], ["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/access/token?token=MWD3SsQT5E
+Completed 302 Found in 46ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/access/token?token=MWD3SsQT5E" for 127.0.0.1 at 2017-11-14 15:13:41 -0600
+Processing by AccessController#token as HTML
+  Parameters: {"token"=>"MWD3SsQT5E"}
+  Rendering access/token.html.erb within layouts/_login
+  Rendered access/token.html.erb within layouts/_login (8.6ms)
+Completed 200 OK in 31ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "alejaro34@gmail.com"], ["LIMIT", 1]]
+Started GET "/access/recover" for 127.0.0.1 at 2017-11-14 15:23:54 -0600
+Processing by AccessController#recover as HTML
+  Rendering access/recover.html.erb within layouts/_login
+  Rendered access/recover.html.erb within layouts/_login (9.5ms)
+Completed 200 OK in 30ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/recover_account" for 127.0.0.1 at 2017-11-14 15:23:56 -0600
+Processing by AccessController#recover_account as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Okr14CCZ3DEp7Gi0Y+rmC1rL1uELD+geOBkqyz0G2GJjbWwV66p3ZMI7TXP86bbaUHZdnjdptKKIclLWNsKAgw==", "email"=>"alejaro34@gmail.com", "commit"=>"Enviar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "alejaro34@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "alejaro34@gmail.com"], ["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/access/token?token=E3x6Hiyu3U
+Completed 302 Found in 29ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/access/token?token=E3x6Hiyu3U" for 127.0.0.1 at 2017-11-14 15:23:56 -0600
+Processing by AccessController#token as HTML
+  Parameters: {"token"=>"E3x6Hiyu3U"}
+  Rendering access/token.html.erb within layouts/_login
+  Rendered access/token.html.erb within layouts/_login (4.6ms)
+Completed 200 OK in 20ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "alejaro34@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "alejaro34@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "alejaro34@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "alejaro34@gmail.com"], ["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "alejaro34@gmail.com"], ["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "full_name" = $2, "token5" = $3, "token10" = $4 WHERE "users"."id" = $5[0m  [["updated_at", "2017-11-14 21:28:11.270376"], ["full_name", "Alejo rojas"], ["token5", "HBRHa"], ["token10", "Mo6PLTsDMa"], ["id", 6]]
+  [1m[35m (17.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "alejaro34@gmail.com"], ["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "token5" = $2, "token10" = $3 WHERE "users"."id" = $4[0m  [["updated_at", "2017-11-14 21:28:18.866866"], ["token5", "WPA6C"], ["token10", "DosJq3m5m3"], ["id", 6]]
+  [1m[35m (17.6ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/access/recover_account" for 127.0.0.1 at 2017-11-14 15:28:39 -0600
+Processing by AccessController#recover_account as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Okr14CCZ3DEp7Gi0Y+rmC1rL1uELD+geOBkqyz0G2GJjbWwV66p3ZMI7TXP86bbaUHZdnjdptKKIclLWNsKAgw==", "email"=>"alejaro34@gmail.com", "commit"=>"Enviar"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "alejaro34@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "alejaro34@gmail.com"], ["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "token5" = $1, "token10" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["token5", "V8Mz3"], ["token10", "Na4vf8u2fW"], ["updated_at", "2017-11-14 21:28:39.365013"], ["id", 6]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/access/token?token=Na4vf8u2fW
+Completed 302 Found in 14ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/access/token?token=Na4vf8u2fW" for 127.0.0.1 at 2017-11-14 15:28:39 -0600
+Processing by AccessController#token as HTML
+  Parameters: {"token"=>"Na4vf8u2fW"}
+  Rendering access/token.html.erb within layouts/_login
+  Rendered access/token.html.erb within layouts/_login (4.5ms)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/recover" for 127.0.0.1 at 2017-11-14 15:36:00 -0600
+Processing by AccessController#recover as HTML
+  Rendering access/recover.html.erb within layouts/_login
+  Rendered access/recover.html.erb within layouts/_login (7.6ms)
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/recover_account" for 127.0.0.1 at 2017-11-14 15:36:03 -0600
+Processing by AccessController#recover_account as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nKcBqsePf/VAumSfLCAJkfu8xOX6xGcQdAmB7cP3x3nFgJhfDLzUoKttQVizI1lA8QFPmsaiO6zEYvnwyDOfmA==", "email"=>"alejaro34@gmail.com", "commit"=>"Enviar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "alejaro34@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "alejaro34@gmail.com"], ["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "token5" = $1, "token10" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["token5", "4uSrx"], ["token10", "aCVXn75iKG"], ["updated_at", "2017-11-14 21:36:03.237324"], ["id", 6]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendering user_mailer/new_email.html.erb
+  Rendered user_mailer/new_email.html.erb (0.4ms)
+UserMailer#new_email: processed outbound mail in 170.5ms
+Sent mail to alejaro34@gmail.com (3036.9ms)
+Date: Tue, 14 Nov 2017 15:36:03 -0600
+From: swimtecapp@gmail.com
+To: alejaro34@gmail.com
+Message-ID: <5a0b61c3685a8_d152ebf990115a6@unleashed.mail>
+Subject: =?UTF-8?Q?[SWIMTEC]_Solicitud_de_recuperaci=C3=B3n_de_cuenta!?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<p>El c=C3=B3digo de recuperacion es: \n\n4uSrx
+
+ Puede acceder a swimte.herokuapp.com/access/token?token=3DaCVXn75iKG par=
+a completar la solicitud.</p>
+
+
+
+
+Redirected to http://localhost:3000/access/token?token=aCVXn75iKG
+Completed 302 Found in 3248ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/access/token?token=aCVXn75iKG" for 127.0.0.1 at 2017-11-14 15:36:06 -0600
+Processing by AccessController#token as HTML
+  Parameters: {"token"=>"aCVXn75iKG"}
+  Rendering access/token.html.erb within layouts/_login
+  Rendered access/token.html.erb within layouts/_login (8.8ms)
+Completed 200 OK in 34ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/recover_account" for 127.0.0.1 at 2017-11-14 15:37:24 -0600
+Processing by AccessController#recover_account as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nKcBqsePf/VAumSfLCAJkfu8xOX6xGcQdAmB7cP3x3nFgJhfDLzUoKttQVizI1lA8QFPmsaiO6zEYvnwyDOfmA==", "email"=>"alejaro34@gmail.com", "commit"=>"Enviar"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "alejaro34@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "alejaro34@gmail.com"], ["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "token5" = $1, "token10" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["token5", "E8UPc"], ["token10", "Faze5sMtJ5"], ["updated_at", "2017-11-14 21:37:24.849844"], ["id", 6]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering user_mailer/new_email.html.erb
+  Rendered user_mailer/new_email.html.erb (0.4ms)
+UserMailer#new_email: processed outbound mail in 54.1ms
+Sent mail to alejaro34@gmail.com (2289.9ms)
+Date: Tue, 14 Nov 2017 15:37:24 -0600
+From: swimtecapp@gmail.com
+To: alejaro34@gmail.com
+Message-ID: <5a0b6214e1135_d152ebf760116a3@unleashed.mail>
+Subject: =?UTF-8?Q?[SWIMTEC]_Solicitud_de_recuperaci=C3=B3n_de_cuenta!?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<p>El c=C3=B3digo de recuperacion es: &lt;br&gt;&lt;br&gt;E8UPc&lt;br&gt;=
+&lt;br&gt; Puede acceder a swimte.herokuapp.com/access/token?token=3DFaze=
+5sMtJ5 para completar la solicitud.</p>
+
+
+
+
+Redirected to http://localhost:3000/access/token?token=Faze5sMtJ5
+Completed 302 Found in 2390ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/access/token?token=Faze5sMtJ5" for 127.0.0.1 at 2017-11-14 15:37:27 -0600
+Processing by AccessController#token as HTML
+  Parameters: {"token"=>"Faze5sMtJ5"}
+  Rendering access/token.html.erb within layouts/_login
+  Rendered access/token.html.erb within layouts/_login (9.0ms)
+Completed 200 OK in 34ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/recover_account" for 127.0.0.1 at 2017-11-14 15:39:30 -0600
+Processing by AccessController#recover_account as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nKcBqsePf/VAumSfLCAJkfu8xOX6xGcQdAmB7cP3x3nFgJhfDLzUoKttQVizI1lA8QFPmsaiO6zEYvnwyDOfmA==", "email"=>"alejaro34@gmail.com", "commit"=>"Enviar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "alejaro34@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "alejaro34@gmail.com"], ["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "token5" = $1, "token10" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["token5", "5NRBr"], ["token10", "qMQPerRpYB"], ["updated_at", "2017-11-14 21:39:30.776403"], ["id", 6]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering user_mailer/new_email.html.erb
+  Rendered user_mailer/new_email.html.erb (0.3ms)
+UserMailer#new_email: processed outbound mail in 47.3ms
+Sent mail to alejaro34@gmail.com (2646.6ms)
+Date: Tue, 14 Nov 2017 15:39:30 -0600
+From: swimtecapp@gmail.com
+To: alejaro34@gmail.com
+Message-ID: <5a0b6292cc52f_d152ebf7ec117e6@unleashed.mail>
+Subject: =?UTF-8?Q?[SWIMTEC]_Solicitud_de_recuperaci=C3=B3n_de_cuenta!?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<p>El c=C3=B3digo de recuperacion es: <br><br>5NRBr<br><br> Puede acceder=
+ a swimte.herokuapp.com/access/token?token=3DqMQPerRpYB para completar la=
+ solicitud.</p>
+
+
+
+
+Redirected to http://localhost:3000/access/token?token=qMQPerRpYB
+Completed 302 Found in 2732ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/access/token?token=qMQPerRpYB" for 127.0.0.1 at 2017-11-14 15:39:33 -0600
+Processing by AccessController#token as HTML
+  Parameters: {"token"=>"qMQPerRpYB"}
+  Rendering access/token.html.erb within layouts/_login
+  Rendered access/token.html.erb within layouts/_login (6.9ms)
+Completed 200 OK in 30ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/token?token=qMQPerRpYB" for 127.0.0.1 at 2017-11-14 15:49:38 -0600
+Processing by AccessController#token as HTML
+  Parameters: {"token"=>"qMQPerRpYB"}
+  Rendering access/token.html.erb within layouts/_login
+  Rendered access/token.html.erb within layouts/_login (8.0ms)
+Completed 200 OK in 24ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/token?token=qMQPerRpYB" for 127.0.0.1 at 2017-11-14 15:50:22 -0600
+Processing by AccessController#token as HTML
+  Parameters: {"token"=>"qMQPerRpYB"}
+  Rendering access/token.html.erb within layouts/_login
+  Rendered access/token.html.erb within layouts/_login (7.2ms)
+Completed 200 OK in 29ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/index" for 127.0.0.1 at 2017-11-14 15:58:56 -0600
+Processing by AccessController#index as HTML
+  Rendering access/index.html.erb within layouts/_login
+  Rendered access/index.html.erb within layouts/_login (5.6ms)
+Completed 200 OK in 19ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/recover" for 127.0.0.1 at 2017-11-14 15:58:58 -0600
+Processing by AccessController#recover as HTML
+  Rendering access/recover.html.erb within layouts/_login
+  Rendered access/recover.html.erb within layouts/_login (7.1ms)
+Completed 200 OK in 31ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/recover_account" for 127.0.0.1 at 2017-11-14 15:59:01 -0600
+Processing by AccessController#recover_account as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4gb7xOgIMA4s9/fHzVAcyL896yEQERHxRpf1P1Dgu0C7IWIxIzubW8cg0gBSU0wZtYBgXix3TU32/I0iWyTjoQ==", "email"=>"alejaro34@gmail.com", "commit"=>"Enviar"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "alejaro34@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "alejaro34@gmail.com"], ["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "token5" = $1, "token10" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["token5", "a2F7f"], ["token10", "KHXGbXbSWP"], ["updated_at", "2017-11-14 21:59:01.863991"], ["id", 6]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering user_mailer/new_email.html.erb
+  Rendered user_mailer/new_email.html.erb (0.5ms)
+UserMailer#new_email: processed outbound mail in 65.9ms
+Sent mail to alejaro34@gmail.com (2578.4ms)
+Date: Tue, 14 Nov 2017 15:59:01 -0600
+From: swimtecapp@gmail.com
+To: alejaro34@gmail.com
+Message-ID: <5a0b6725e8fe6_d152ebf990118d2@unleashed.mail>
+Subject: =?UTF-8?Q?[SWIMTEC]_Solicitud_de_recuperaci=C3=B3n_de_cuenta!?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<p>El c=C3=B3digo de recuperacion es: <br><br>a2F7f<br><br> Puede acceder=
+ a swimtec.herokuapp.com/access/token?token=3DKHXGbXbSWP para completar l=
+a solicitud.</p>
+
+
+
+
+Redirected to http://localhost:3000/access/token?token=KHXGbXbSWP
+Completed 302 Found in 2711ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/access/token?token=KHXGbXbSWP" for 127.0.0.1 at 2017-11-14 15:59:04 -0600
+Processing by AccessController#token as HTML
+  Parameters: {"token"=>"KHXGbXbSWP"}
+  Rendering access/token.html.erb within layouts/_login
+  Rendered access/token.html.erb within layouts/_login (7.5ms)
+Completed 200 OK in 31ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/update_account" for 127.0.0.1 at 2017-11-14 15:59:39 -0600
+Processing by AccessController#update_account as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JZ5/L0bRUjdJStIe9Cv3boChqO8Sz3TBDvZZr1GkVIebwNyBx4VNWFx0BRdZCMV8eTEa6lIJDXL+1fi7E8H40w==", "token10"=>"KHXGbXbSWP", "token5"=>"a2F7f", "new_pass"=>"puta", "verify_pass"=>"puta", "commit"=>"Enviar"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."token5" = $1 AND "users"."token10" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["token5", "a2F7f"], ["token10", "KHXGbXbSWP"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 184ms (ActiveRecord: 0.9ms)
+
+
+  
+NameError (undefined local variable or method `new_pass' for #<AccessController:0x007f87c83a1fb8>):
+  
+app/controllers/access_controller.rb:88:in `update_account'
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.4ms)
+Started POST "/access/update_account" for 127.0.0.1 at 2017-11-14 16:00:06 -0600
+Processing by AccessController#update_account as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JZ5/L0bRUjdJStIe9Cv3boChqO8Sz3TBDvZZr1GkVIebwNyBx4VNWFx0BRdZCMV8eTEa6lIJDXL+1fi7E8H40w==", "token10"=>"KHXGbXbSWP", "token5"=>"a2F7f", "new_pass"=>"puta", "verify_pass"=>"puta", "commit"=>"Enviar"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."token5" = $1 AND "users"."token10" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["token5", "a2F7f"], ["token10", "KHXGbXbSWP"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "alejaro34@gmail.com"], ["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["password_digest", "$2a$10$VYc3K70FWEi68vbdYNc5x.aRIrWKLY5TzIqJlBYP09ZTIJWj6GGfy"], ["updated_at", "2017-11-14 22:00:06.563795"], ["id", 6]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "alejaro34@gmail.com"], ["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "token10" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2017-11-14 22:00:06.569781"], ["token10", nil], ["id", 6]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "alejaro34@gmail.com"], ["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "token5" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2017-11-14 22:00:06.574985"], ["token5", nil], ["id", 6]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/access/index
+Redirected to 
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 8.9ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/access_controller.rb:101:in `update_account'
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/ale/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.1ms)
+Started POST "/access/update_account" for 127.0.0.1 at 2017-11-14 16:01:23 -0600
+Processing by AccessController#update_account as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JZ5/L0bRUjdJStIe9Cv3boChqO8Sz3TBDvZZr1GkVIebwNyBx4VNWFx0BRdZCMV8eTEa6lIJDXL+1fi7E8H40w==", "token10"=>"KHXGbXbSWP", "token5"=>"a2F7f", "new_pass"=>"puta", "verify_pass"=>"puta", "commit"=>"Enviar"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."token5" = $1 AND "users"."token10" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["token5", "a2F7f"], ["token10", "KHXGbXbSWP"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/access/index
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/access/index" for 127.0.0.1 at 2017-11-14 16:01:23 -0600
+Processing by AccessController#index as HTML
+  Rendering access/index.html.erb within layouts/_login
+  Rendered access/index.html.erb within layouts/_login (7.9ms)
+Completed 200 OK in 28ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-14 16:01:30 -0600
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"owQiFjGLQnIO4B4Jp5KmHxFgHGbi2xv4PB9q4SBMReRwICk+Bx9EzXX7t2cOW1H8i4wZVySC//PRl4scdYN/+A==", "email"=>"alejaro34@gmail.com", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "alejaro34@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/user/pending/index
+Completed 302 Found in 122ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/user/pending/index" for 127.0.0.1 at 2017-11-14 16:01:30 -0600
+Processing by User::PendingController#index as HTML
+  Rendering user/pending/index.html.erb within layouts/_login
+  Rendered user/pending/index.html.erb within layouts/_login (8.6ms)
+Completed 200 OK in 37ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-14 16:03:11 -0600
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"owQiFjGLQnIO4B4Jp5KmHxFgHGbi2xv4PB9q4SBMReRwICk+Bx9EzXX7t2cOW1H8i4wZVySC//PRl4scdYN/+A==", "email"=>"alejaro34@gmail.com", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "alejaro34@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/access/index
+Completed 302 Found in 90ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/access/index" for 127.0.0.1 at 2017-11-14 16:03:12 -0600
+Processing by AccessController#index as HTML
+  Rendering access/index.html.erb within layouts/_login
+  Rendered access/index.html.erb within layouts/_login (6.8ms)
+Completed 200 OK in 26ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/recover" for 127.0.0.1 at 2017-11-14 16:04:03 -0600
+Processing by AccessController#recover as HTML
+  Rendering access/recover.html.erb within layouts/_login
+  Rendered access/recover.html.erb within layouts/_login (7.7ms)
+Completed 200 OK in 30ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/recover_account" for 127.0.0.1 at 2017-11-14 16:04:08 -0600
+Processing by AccessController#recover_account as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7YDHCiRJkAJgBFjdydbFkRIQbG3azZowBVAMRI96EUm0p17/73o7V4vTfRpW1ZVAGK3nEuarxoy1O3RZhL5JqA==", "email"=>"alejaro34@gmail.com", "commit"=>"Enviar"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "alejaro34@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "alejaro34@gmail.com"], ["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "token5" = $1, "token10" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["token5", "JbSvM"], ["token10", "CS5Te7ucZ7"], ["updated_at", "2017-11-14 22:04:08.911266"], ["id", 6]]
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering user_mailer/new_email.html.erb
+  Rendered user_mailer/new_email.html.erb (0.7ms)
+UserMailer#new_email: processed outbound mail in 62.8ms
+Sent mail to alejaro34@gmail.com (2615.0ms)
+Date: Tue, 14 Nov 2017 16:04:09 -0600
+From: swimtecapp@gmail.com
+To: alejaro34@gmail.com
+Message-ID: <5a0b6859659_d152ebf904119a3@unleashed.mail>
+Subject: =?UTF-8?Q?[SWIMTEC]_Solicitud_de_recuperaci=C3=B3n_de_cuenta!?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<p>El c=C3=B3digo de recuperacion es: <br><br>JbSvM<br><br> Puede acceder=
+ a swimtec.herokuapp.com/access/token?token=3DCS5Te7ucZ7 para completar l=
+a solicitud.</p>
+
+
+
+
+Redirected to http://localhost:3000/access/token?token=CS5Te7ucZ7
+Completed 302 Found in 2717ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/access/token?token=CS5Te7ucZ7" for 127.0.0.1 at 2017-11-14 16:04:11 -0600
+Processing by AccessController#token as HTML
+  Parameters: {"token"=>"CS5Te7ucZ7"}
+  Rendering access/token.html.erb within layouts/_login
+  Rendered access/token.html.erb within layouts/_login (9.6ms)
+Completed 200 OK in 40ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/update_account" for 127.0.0.1 at 2017-11-14 16:05:04 -0600
+Processing by AccessController#update_account as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yaNhQaqAs6E1FVsmoCfTbnHG+Y8GQQoA/KRGWvT6zj53/cLvK9SsziArjC8NBOF8iFZLikaHc7MMh+dOtp9iag==", "token10"=>"CS5Te7ucZ7", "token5"=>"JbSvM", "new_pass"=>"Xs976431", "verify_pass"=>"Xs976431", "commit"=>"Enviar"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."token5" = $1 AND "users"."token10" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["token5", "JbSvM"], ["token10", "CS5Te7ucZ7"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "alejaro34@gmail.com"], ["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["password_digest", "$2a$10$pDgjjHGh3bfpLvj8lsEjOu89uHWaMP60TFs3P0UZoyOn8/NHmOH/S"], ["updated_at", "2017-11-14 22:05:04.559351"], ["id", 6]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "alejaro34@gmail.com"], ["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "token10" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2017-11-14 22:05:04.565890"], ["token10", nil], ["id", 6]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "alejaro34@gmail.com"], ["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "token5" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2017-11-14 22:05:04.571703"], ["token5", nil], ["id", 6]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/access/index
+Completed 302 Found in 129ms (ActiveRecord: 10.3ms)
+
+
+Started GET "/access/index" for 127.0.0.1 at 2017-11-14 16:05:04 -0600
+Processing by AccessController#index as HTML
+  Rendering access/index.html.erb within layouts/_login
+  Rendered access/index.html.erb within layouts/_login (6.8ms)
+Completed 200 OK in 28ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-14 16:05:14 -0600
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SBVJBd0xrdHuZj7uMJFm/fUkz3J8T5FkOB/nRxaIk4ybMUIt66WrbpV9l4CZWJEeb8jKQ7oWdW/Vlwa6Q0epkA==", "email"=>"alejaro34@gmail.com", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "alejaro34@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/access/index
+Completed 302 Found in 110ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/access/index" for 127.0.0.1 at 2017-11-14 16:05:14 -0600
+Processing by AccessController#index as HTML
+  Rendering access/index.html.erb within layouts/_login
+  Rendered access/index.html.erb within layouts/_login (10.6ms)
+Completed 200 OK in 41ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-14 16:05:20 -0600
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"czaPZAqj0Aqyw4MNBe5PUcf9yY+OTC3/ivifH9YBeU6gEoRMPDfWtcnYKmOsJ7iyXRHMvkgVyfRncH7ig85DUg==", "email"=>"alejaro34@gmail.com", "password"=>"[FILTERED]", "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "alejaro34@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/user/pending/index
+Completed 302 Found in 105ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/user/pending/index" for 127.0.0.1 at 2017-11-14 16:05:20 -0600
+Processing by User::PendingController#index as HTML
+  Rendering user/pending/index.html.erb within layouts/_login
+  Rendered user/pending/index.html.erb within layouts/_login (6.9ms)
+Completed 200 OK in 35ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+

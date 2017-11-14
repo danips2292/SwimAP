@@ -4,29 +4,22 @@
      <div class ="login">
       <%= image_tag 'logo.png', height:'50', class:'logo'%>
       <div class='form_container'>
-      <H2> Crea una nueva Cuenta </H2>
+      <H2> Recuperación de Cuenta </H2>
+    <p> Enviaremos un código a tu correo. Una vez comprobado el código prodrás cambiar la contraseña </p>
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
-          <%= form_tag(:action => 'attempt_login') do %>
+          <%= form_tag(:action => 'recover_account') do %>
             <table>
               <tr>
                 <td> Email </td>
                 <td> <%= text_field_tag(:email) %> </td>
               </tr>
               <tr>
-                <td> Contraseña </td>
-                <td> <%= password_field_tag(:password) %> </td>
-              </tr>
-              <tr>
                 <td> &nbsp; </td>
-                <td> <%= submit_tag("Ingresar") %> </td>
+                <td> <%= submit_tag("Enviar") %> </td>
               </tr>
             </table>
             <%end%>
-
-               <p>¿No tienes una cuenta? <%= link_to("Crea una Nueva Cuenta", :action => 'signup') %> </p>
-
-               <p>¿Olvidaste la contraseña? <%= link_to("Recupera tu cuenta", :action => 'recover') %> </p>
       </div>
 
     </div>

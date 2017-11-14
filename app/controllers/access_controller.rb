@@ -32,7 +32,7 @@ class AccessController < ApplicationController
   	if params[:email].present? && params[:password].present?
       found_user = User.where(:email => params[:email]).first
       if found_user
-        authorized_user =found_user.authenticate(params[:password])
+        authorized_user = found_user.authenticate(params[:password])
       end
     end
     if authorized_user
@@ -59,6 +59,7 @@ class AccessController < ApplicationController
 
 
 
+
   def logout
     session[:user_id] = nil
     session[:email] = nil
@@ -66,6 +67,40 @@ class AccessController < ApplicationController
     redirect_to access_index_path
   end
 
+
+  def recover_account
+    
+    @user = User.where(email: params[:email]).first
+    if @user.nil? == false
+      @user.update_attributes(token5: SecureRandom.base58(5), token10: SecureRandom.base58(10))
+      subject = '[SWIMTEC] Solicitud de recuperación de cuenta!'
+      body = 'El código de recuperacion es: <br><br>'+@user.token5+"<br><br> Puede acceder a swimtec.herokuapp.com/access/token?token="+@user.token10+ " para completar la solicitud."
+      UserMailer.new_email(@user.email, subject, body.html_safe).deliver
+      redirect_to action: 'token', token: @user.token10 
+    end
+
+  end
+
+  def update_account
+      user = User.where(token5: params[:token5], token10: params[:token10]).first
+      if user.nil? == false
+        if  params[:new_pass] == params[:verify_pass]
+          user.update(password: params[:new_pass])
+          user.update(token10: nil)
+          user.update(token5: nil)
+          flash[:notice] = "Contraseña actualizada correctamente. Inicie sesión"
+          redirect_to access_index_path
+        else
+          flash[:notice] = "La contraseña no coincide. Intente de nuevo"
+          redirect_to action: 'token', token: user.token10 
+        end
+
+      else
+        flash[:notice] = "Inicie sesión"
+        redirect_to access_index_path
+      end
+
+  end
 
 
 
