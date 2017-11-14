@@ -20,6 +20,11 @@ class Admin::RankingsController < ApplicationController
     @ranking = RankingLine.find(params[:id])
   end
 
+
+  def destroy
+    @ranking = RankingLine.find(params[:id])
+    @ranking.destroy
+  end
 end  
 
   

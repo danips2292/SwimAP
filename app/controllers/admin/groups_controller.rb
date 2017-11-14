@@ -54,6 +54,10 @@ layout 'layouts/_admin_partial'
   # DELETE /groups/1.json
   def destroy
     @group = Group.find(params[:id])
+    User.where(group_id: @group.id).destroy_all
+    Assistance.where(group_id: @group.id).destroy_all
+    Post.where(group_id: @group.id).destroy_all
+    binding.pry    
     @group.destroy
     redirect_to admin_groups_path
   end

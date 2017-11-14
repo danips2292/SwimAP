@@ -6,10 +6,10 @@ class User < ApplicationRecord
  has_one :initial_form
  has_one :team_form
  has_one :group
- has_many :comments
- has_many :ranking_lines
- has_many :videos 
- has_many :conversations, :foreign_key => :sender_id
+ has_many :comments , :dependent => :nullify
+ has_many :ranking_lines , :dependent => :nullify
+ has_many :videos ,:dependent => :nullify
+ has_many :conversations, :foreign_key => :sender_id , :dependent => :nullify
 
  
   scope :pending, lambda { where(:is_accepted => false, :is_admin => false).
