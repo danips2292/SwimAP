@@ -1,6 +1,6 @@
 class Admin::RequestsController < ApplicationController
 	layout 'layouts/_admin_partial'
-   before_action :confirm_logged_in
+  before_action :confirm_logged_in
   before_action :validates_admin_access
  
  
@@ -11,6 +11,9 @@ class Admin::RequestsController < ApplicationController
   def accept
   	@user = User.find(params[:id])
   	if @user.update(is_accepted: true)
+      subject = '[SWIMTEC] Cuenta Aceptada!'
+      body = 'Su cuenta de SwimTEC ha sido aprobada por la profesora. Puede acceder a swimtec.herokuapp.com e iniciar sesión'
+      UserMailer.new_email(@user.email, subject, body).deliver
   		flash[:notice] = [@user.full_name, "fue acceptado. El usuario ya puede acceder a la cuenta"].join(" ")
   		redirect_to admin_requests_index_path
   	else

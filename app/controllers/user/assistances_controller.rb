@@ -7,6 +7,5 @@ class User::AssistancesController < ApplicationController
     @user = User.find(session[:user_id])
     @group_id = @user.group_id
   	@assistancesGroup = Assistance.byGroupId(@group_id.to_i)
-  	puts @assistancesGroup
   end
 end

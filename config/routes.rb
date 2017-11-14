@@ -27,7 +27,11 @@ Rails.application.routes.draw do
     resources :posts
     resources :videos, only: [:index]
     resources :documents
-    resources :students
+    resources :students, only: [:index] do
+      collection do
+        get :view_student
+      end
+    end
     resources :rankings, only: [:index]
     resources :assistances, only: [:index] do
       collection do

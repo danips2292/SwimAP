@@ -1,4 +1,4 @@
-<h1> Asistencia1 </h1>
+<h1> Asistencia </h1>
 <%= form_tag(admin_assistances_path, :method => "get", id: "search-form") do %>
     <th>Grupo</th>
     <%= select_tag :group_id, options_from_collection_for_select(Group.all, :id, :name, params[:group_id]), include_blank: true %>

@@ -1,6 +1,6 @@
 class Admin::VideosController < ApplicationController
 	layout 'layouts/_admin_partial'
-   before_action :confirm_logged_in
+  before_action :confirm_logged_in
   before_action :validates_admin_access
  
 
@@ -16,6 +16,9 @@ class Admin::VideosController < ApplicationController
     	@video.comment = params[:comment]
       @video.remote_path  = "/"+params[:file].original_filename.to_s
     	if @video.save
+        subject = '[SWIMTEC] Nuevo video-comentario!'
+        body = 'Se ha agregado un nuevo video de su progreso en el curso. Puede acceder a swimtec.herokuapp.com para verlo'
+        UserMailer.new_email(User.find(params[:user_id].to_i).email, subject, body).deliver
         flash[:notice]= 'Video subido correctamente'
     		redirect_to admin_videos_path
     	end
@@ -42,7 +45,7 @@ class Admin::VideosController < ApplicationController
   	client = DropboxApi::Client.new("bulRELf_jgAAAAAAAAAACN0I0-tJgLdc8QsH5Let93vT5CCbi6jRPQFW5VEjSFc5")
   	space = client.get_space_usage
   	@remaining = 100 - (space::used.to_f / space::allocation::allocated.to_f * 100.0).round(2)
-    @students = User.where(:group_id => params[:id])
+    @students = User.accepted_by_group(params[:id])
   end 
 
   def newVideo

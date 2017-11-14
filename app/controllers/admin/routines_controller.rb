@@ -1,7 +1,7 @@
 class Admin::RoutinesController < ApplicationController
 	layout 'layouts/_admin_partial'
   before_action :set_routine, only: [:show, :edit, :update, :destroy]
-   before_action :confirm_logged_in
+  before_action :confirm_logged_in
   before_action :validates_admin_access
  
  

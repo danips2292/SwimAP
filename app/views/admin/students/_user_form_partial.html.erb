@@ -1,0 +1,397 @@
+
+<table>
+	<tr>
+		<td> <%= 'Cédula' %> </td>
+		<td> <%= m.legal_id%> </td>
+	</tr>
+	<tr>
+		<td> <%= 'Carné' %> </td>
+		<td> <%= m.tec_id%> </td>
+	</tr>
+
+	<tr>
+		<td> <%= 'Carrera' %> </td>
+		<td> <%= m.carreer%> </td>
+	</tr>
+	<tr>
+		<td> <%= 'Género' %> </td>
+		<td> <%= m.gender%> </td>
+	</tr>
+	<tr>
+		<td> <%= 'Fecha de Nacimiento' %> </td>
+		<td> <%= m.birth_date%> </td>
+	</tr>
+
+	<tr>
+		<td> <%= 'Lugar de Trabajo' %> </td>
+		<td> <%= m.workplace%> </td>
+	</tr>
+	<tr>
+		<td> <%= 'Dirección de Estudios' %> </td>
+		<td> <%= m.study_address%> </td>
+	</tr>
+	<tr>
+		<td> <%= 'Nombre del Padre' %> </td>
+		<td> <%= m.father_name%> </td>
+	</tr>
+	<tr>
+		<td> <%= 'Nombre de la Madre' %> </td>
+		<td> <%= m.mother_name%> </td>
+	</tr><tr>
+		<td> <%= 'Dirección de residencia' %> </td>
+		<td> <%= m.home_address%> </td>
+	</tr>
+	<tr>
+		<td> <%= 'Nombre de contacto en caso de accidente' %> </td>
+		<td> <%= m.accident_name%> </td>
+	</tr>
+	<tr>
+		<td> <%= 'Telefono en Caso de Accidente' %> </td>
+		<td> <%= m.accident_telephone%> </td>
+	</tr>
+
+	<tr>
+		<td> <%= 'Observaciones en Caso de Accidente' %> </td>
+		<td> <%= m.accident_comment%> </td>
+	</tr>
+	<tr>
+		<td> <%= 'Direccion en caso de Accidente' %> </td>
+		<td> <%= m.accident_address%> </td>
+	</tr>
+	<tr>
+		<td> <%= 'Ha participado en Equipos' %> </td>
+		<td> 
+		<% if m.team_history%>
+			Si 
+			<% else %>
+			No 
+			<%end %> </td>
+	</tr>
+	<tr>
+		<td> <%= 'Logros Deprotivos Alcanzados' %> </td>
+		<td> 
+		<% if m.team_accomplishments%>
+			Si 
+			<% else %>
+			No 
+			<%end %>
+
+		 </td>
+	</tr>
+	<tr>
+		<td> <%= 'Semestre' %> </td>
+		<td> <%= m.semester%> </td>
+	</tr>
+	<tr>
+		<td> <%= 'Año en Curso ' %> </td>
+		<td> <%= m.current_year%> </td>
+	</tr>
+	<tr>
+		<td> <%= 'Altura en Centímetros' %> </td>
+		<td> <%= m.height_cm%> </td>
+	</tr>
+	<tr>
+		<td> <%= 'Peso en Kilogramos' %> </td>
+		<td> <%= m.weight%> </td>
+	</tr>
+
+	<tr>
+		<td> <%= 'Nombre del Doctor de Cabecera' %> </td>
+		<td> <%= m.doctor_name%> </td>
+	</tr>
+	<tr>
+		<td> <%= 'Tipo de Sangre' %> </td>
+		<td> <%= m.blood_type%> </td>
+	</tr>
+	<tr>
+		<td> <%= '¿Padece de alguna enfermedad?' %> </td>
+		<td>
+		<% if m.deasease%>
+			Si 
+			<% else %>
+			No 
+			<%end %>
+
+
+		</td>
+	</tr>
+	<tr>
+		<td> <%= '¿Ha sido Hospitalizado?' %> </td>
+		<td> 
+		<% if m.hospitalized%>
+			Si 
+			<% else %>
+			No 
+			<%end %> </td>
+	</tr>
+	<tr>
+		<td> <%= '¿Ha tenido alguna Cirugía?' %> </td>
+		<td> 
+
+			<% if m.surgery%>
+			Si 
+			<% else %>
+			No 
+			<%end %> </td>
+
+
+		 </td>
+	</tr>
+	<tr>
+		<td> <%= '¿Toma algún medicamento?' %> </td>
+		<td> 
+
+		<% if m.meds%>
+			Si 
+			<% else %>
+			No 
+			<%end %>
+
+		 </td>
+
+	</tr>
+	<tr>
+		<td> <%= '¿Toma Alguna vitamina o suplemento alimneticio?' %> </td>
+		<td> 
+			<% if m.vitamins%>
+			Si 
+			<% else %>
+			No 
+			<%end %>
+
+
+
+		 </td>
+	</tr>
+
+	<tr>
+		<td> <%= '¿Padece de Alergias?' %> </td>
+		<td> 
+
+		<% if m.allergies%>
+			Si 
+			<% else %>
+			No 
+			<%end %></td>
+	</tr>
+	<tr>
+		<td> <%= '¿Tiene algún Hematoma durante o después de la realización de ejercicio fisico?' %> </td>
+		<td> 
+
+		<% if m.bruises%>
+			Si 
+			<% else %>
+			No 
+			<%end %>
+
+		 </td>
+	</tr>
+	<tr>
+		<td> <%= '¿Ha sufrido Desmayos durante o después de la realización de ejercicio fisico?' %> </td>
+		<td> 
+
+		<% if m.faints%>
+			Si 
+			<% else %>
+			No 
+			<%end %>
+
+		 </td>
+	</tr>
+	<tr>
+		<td> <%= '¿Padece de Mareos durante o después de la realización de ejercicio fisico?' %> </td>
+		<td> 
+				<% if m.dizziness%>
+			Si 
+			<% else %>
+			No 
+			<%end %>
+
+		 </td>
+	</tr>
+	<tr>
+		<td> <%= '¿Ha tenido de dolor de Pecho durante o después de la realización de ejercicio fisico?' %> </td>
+		<td> 
+			<% if m.chestpain%>
+			Si 
+			<% else %>
+			No 
+			<%end %>
+
+		</td>
+	</tr>
+	<tr>
+		<td> <%= '¿Padece de Dolores de Cabeza durante o después de la realización de ejercicio fisico?' %> </td>
+		<td> 
+
+		<% if m.headeache%>
+			Si 
+			<% else %>
+			No 
+			<%end %>
+			 </td>
+	</tr>
+	<tr>
+		<td> <%= '¿Padece de Colesterol Alto?' %> </td>
+		<td> 
+				<% if m.cholesterol%>
+			Si 
+			<% else %>
+			No 
+			<%end %>
+			 </td>
+
+		 </td>
+	</tr>
+	<tr>
+		<td> <%= '¿Se ha sometido a estudios médicos del corazón?' %> </td>
+		<td>  
+
+		<% if m.heart_studies%>
+			Si 
+			<% else %>
+			No 
+			<%end %>
+			 </td>
+		</td>
+	</tr>
+	<tr>
+		<td> <%= '¿Ha tenido algún familiar que ha sufrido un ataque al corazón o de forma súbita antes de los 50 años?' %> </td>
+		<td> 
+			<% if m.heartattack_related%>
+			Si 
+			<% else %>
+			No 
+			<%end %>
+
+
+		 </td>
+	</tr>
+	<tr>
+		<td> <%= '¿Ha Tenido problemas en la piel?' %> </td>
+		<td> 
+
+		<% if m.skin_problems%>
+			Si 
+			<% else %>
+			No 
+			<%end %>
+
+		</td>
+	</tr>
+	<tr>
+		<td> <%= '¿Ha tenido traumatismos craneal o conmoción cerebral?' %> </td>
+		<td> 
+
+		<% if m.concussion%>
+			Si 
+			<% else %>
+			No 
+			<%end %>
+</td>
+
+
+	</tr>
+	<tr>
+		<td> <%= '¿Ha presentado alguna vez pérdida del conocimiento?' %> </td>
+		<td>
+		<% if m.memory_loss%>
+			Si 
+			<% else %>
+			No 
+			<%end %>
+</td>
+
+		 </td>
+	</tr>
+	<tr> 
+		<td> <%= '¿Ha tenido alguna ocasión convulsiones o tiene tratameinto anti-convulsivo?' %> </td>
+		<td> 
+		<% if m.convulsions%>
+			Si 
+			<% else %>
+			No 
+			<%end %>
+</td>
+
+		 </td>
+	</tr>
+	<tr>
+		<td> <%= '¿Ha tenido alguna vez perdida de la sensibilidad u hormigueos en los brazos, piernas, manos o pies asociado o no al ejercio?' %> </td>
+		<td>  
+
+		<% if m.tingles%>
+			Si 
+			<% else %>
+			No 
+			<%end %>
+</td>
+		</td>
+	</tr>
+	<tr>
+		<td> <%= '¿Tiene tos, pitos, o dificultades respiratorias antes, durante o despúes del ejercicio?' %> </td>
+		<td> 
+
+			<% if m.cough%>
+			Si 
+			<% else %>
+			No 
+			<%end %>
+			</td>
+
+
+		</td>
+	</tr>
+	<tr>
+		<td> <%= '¿Ha tenido algún problema de visón o de los ojos?' %> </td>
+		<td> 
+
+			<% if m.eye_problems%>
+			Si 
+			<% else %>
+			No 
+			<%end %>
+			</td>
+
+
+		 </td>
+	</tr>
+	<tr>
+		<td> <%= '¿Ha tenido alguna vez alguna fractura, esguince o desgarre?' %> </td>
+		<td> 
+		<% if m.sprains%>
+			Si 
+			<% else %>
+			No 
+			<%end %>
+			</td>
+
+
+		</td>
+	</tr>
+	<tr>
+		<td> <%= '¿Padece de diabetes?' %> </td>
+		<td> 
+
+		<% if m.diabetes%>
+			Si 
+			<% else %>
+			No 
+			<%end %>
+			</td> </td>
+
+
+	</tr>
+	<tr>
+		<td> <%= '¿Está o o tiene sospechas de estar embarazada?' %> </td>
+		<td> 
+		<% if m.pregnant%>
+			Si 
+			<% else %>
+			No 
+			<%end %>
+			</td> </td>
+
+
+	</tr>
+</table>

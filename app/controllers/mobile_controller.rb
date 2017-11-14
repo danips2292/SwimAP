@@ -18,12 +18,12 @@ class MobileController < ApplicationController
 
   def selectStudents
     @group  = Assistance.find(params[:id]).group_id
-    @students = User.where(:group_id => @group)
+    @students = User.accepted_by_group(@group)
   end
 
   def finishAssistance
     @group  = Assistance.find(params[:id]).group_id
-    @students = User.where(:group_id => @group)
+    @students = User.accepted_by_group(@group)
     @assistance_id = params[:id]
     @students.each do |student| 
     @new_assistance_record = AssistancesUser.new(user_id: student.id, assistance_id: @assistance_id )
@@ -50,7 +50,7 @@ class MobileController < ApplicationController
   end
 
   def selectStudent
-    @students = User.where(:group_id => params[:id])
+    @students = User.accepted_by_group(params[:id])
   end 
 
   def newRanking
@@ -75,6 +75,9 @@ class MobileController < ApplicationController
   def addComment
     @comment  =  Comment.new(comment_params)
     if @comment.save
+      subject = '[SWIMTEC] Nuevo comentario!'
+        body = 'Se ha agregado un nuevo comentario de su progreso en el curso. Puede acceder a swimtec.herokuapp.com para verlo'
+        UserMailer.new_email(User.find(@comment.user_id).email, subject, body).deliver
       redirect_to(:action => 'finishedComment')
     end
   end

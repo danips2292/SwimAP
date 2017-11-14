@@ -1,1 +1,21 @@
 <h1>Estudiantes</h1>
+<%= form_tag(admin_students_path, :method => "get", id: "search-form") do %>
+    <th>Grupo</th>
+    <%= select_tag :group_id, options_from_collection_for_select(Group.all, :id, :name, params[:group_id]), include_blank: true %>
+    <%= submit_tag "Buscar" , :name => nil %>
+<% end %>
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Grupo</th>
+        <th>Ver</th>
+        <th colspan="3"></th>
+</tr>
+
+<% @students.each do |student| %>
+<tr>
+  <td><%= student.full_name %></td>
+  <td><%= Group.find(student.group_id).name %></td>
+  <td><%= link_to "Ver", {action: 'view_student', student_id: student.id} %> </td>  
+</tr>
+<% end %>

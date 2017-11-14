@@ -1,0 +1,44 @@
+
+<h1> Información de Estudiante </h1>
+<table>
+<tr> <th> Nombre </th> <td> <%= @student.full_name %> </td></tr>
+<tr> <th> Correo </th> <td> <%= @student.email %> </td></tr>
+<tr> <th> Grupo </th> <td> <%= Group.find(@student.group_id).name %> </td></tr>
+
+</table>
+
+ <div class="tab">
+ <button class="tablinks" onclick="openCity(event, 'Form')">Formulario</button>
+  <button class="tablinks" onclick="openCity(event, 'Comments')">Comentarios</button>
+  <button class="tablinks" onclick="openCity(event, 'Videos')">Videos</button>
+  <button class="tablinks" onclick="openCity(event, 'Assistances')">Asistencias</button>
+</div>
+
+<div id="Form" class="tabcontent">
+<% if Group.find(@student.group_id).tip_group == 'Regular' %>
+	<% if @form.nil? == false %>
+  		<%= render partial: 'user_form_partial', locals: {m: @form} %>
+  	<% else  %>
+  		<h4> El usuario no ha completado el formulario </h4>
+  	<% end %>
+ <% else %> 
+ 	<% if @teamform.nil? == false %>
+  		<%= render partial: 'team_form_partial', locals: {m: @teamform} %>
+  	<% else  %>
+  		<h4> El usuario no ha completado el formulario </h4>
+  	<% end %>
+<% end %>
+</div>
+
+
+<div id="Comments" class="tabcontent">
+  <%= render partial: 'comments_partial', locals: {comments: @comments} %>
+</div>
+
+<div id="Videos" class="tabcontent">
+  <%= render partial: 'videos_partial', locals: {videos: @videos} %>
+</div>
+
+<div id="Assistances" class="tabcontent">
+ <%= render partial: 'assistances_partial', locals: {student: @student, assistancesGroup: @assistancesGroup} %>
+</div> 
