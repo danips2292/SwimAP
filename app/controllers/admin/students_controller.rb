@@ -24,4 +24,15 @@ layout 'layouts/_admin_partial'
   	@form = InitialForm.where(user_id: @student.id).first
  	@teamform = TeamForm.where(user_id: @student.id).first
   end
+
+  def destroy
+    @student  =  User.find(params[:id])
+    @user_team = Group.where(id: @student.group_id).first
+    if (@user_team.tip_group == "Equipo")
+      @student.destroy
+    else
+      render 'index'
+    end
+    redirect_to admin_students_path
+  end
 end
