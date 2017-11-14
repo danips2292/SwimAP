@@ -15,6 +15,7 @@
    <th>Estilo</th>
    <th>Distancia</th>
    <th>Tiempo</th>
+   <th>Eliminar</th>
     <th colspan="3"></th>
  </tr>
 
@@ -23,7 +24,8 @@
     <td><%= User.find(ranking.user_id).full_name %></rd>
     <td><%= ranking.style %></td>
     <td><%= ranking.distance %></td> 
-    <td><%= ranking.time %></td>   
+    <td><%= ranking.time %></td>
+    <td><%= link_to image_tag("removeIcon.png", class: 'delete_icon', border: 0), admin_ranking_path(ranking), method: :delete, data: { confirm: 'Esta seguro?' } %></td>   
   </tr>
 <% end %>
 

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     get 'comments/index'
     get 'assistances/index'
     get 'posts/index'
+    get 'documents/index'
     post 'register'
     patch 'register'
   end
@@ -28,7 +29,7 @@ Rails.application.routes.draw do
     resources :videos, only: [:index]
     resources :documents
     resources :students
-    resources :rankings, only: [:index]
+    resources :rankings
     resources :assistances, only: [:index] do
       collection do
         get :info_student
@@ -55,6 +56,7 @@ Rails.application.routes.draw do
     get 'form/index'
     get 'routines/index'
     get 'posts/index'
+    get 'documents/index'
     match 'form/register' => 'form/register', via: [:patch,:post]
   end
 
