@@ -5,7 +5,7 @@ class User < ApplicationRecord
   #:recoverable, :rememberable, :trackable, :validatable #,:confirmable
  has_one :initial_form
  has_one :team_form
- has_one :group
+ has_one :group 
  has_many :comments , :dependent => :nullify
  has_many :ranking_lines , :dependent => :nullify
  has_many :videos ,:dependent => :nullify
