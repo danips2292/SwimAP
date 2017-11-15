@@ -56,7 +56,9 @@ layout 'layouts/_admin_partial'
     @group = Group.find(params[:id])
     @users = User.where(group_id: @group.id)
     @users.each do |user|
-      AssistancesUser.where(user_id: @user.id).destroy
+      if AssistancesUser.where(user_id: @user.id).nil? == false
+        AssistancesUser.where(user_id: @user.id).destroy
+      end 
     end      
     User.where(group_id: @group.id).destroy_all
     Assistance.where(group_id: @group.id).destroy_all
