@@ -9,9 +9,9 @@ before_action :confirm_logged_in
     distance = params[:distance]
     style = params[:style]
     if params[:distance] || params[:style]
-        @rankings = RankingLine.search(distance,style).order("time DESC")
+        @rankings = RankingLine.search(distance,style).order("time ASC")
     else
-        @rankings = RankingLine.all.order('time DESC')
+        @rankings = RankingLine.all.order('time ASC')
     end
   end  
 
