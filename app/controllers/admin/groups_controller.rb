@@ -55,10 +55,9 @@ layout 'layouts/_admin_partial'
   def destroy
     @group = Group.find(params[:id])
     @users = User.where(group_id: @group.id)
-    binding.pry
     @users.each do |user|
-      if AssistancesUser.where(user_id: @user.id).nil? == false
-        AssistancesUser.where(user_id: @user.id).destroy
+      if AssistancesUser.where(user_id: user.id).nil? == false
+        AssistancesUser.delete_all(user_id: user.id)
       end 
     end  
     Assistance.where(group_id: @group.id).destroy_all
@@ -66,11 +65,12 @@ layout 'layouts/_admin_partial'
       @group.destroy
     else
       @users.each do |user|
-        if Comment.where(user_id: @user.id).nil? == false
-          Comment.where(user_id: @user.id).destroy_all
+        if Comment.where(user_id: user.id).nil? == false
+          Comment.where(user_id: user.id).destroy_all
         end
       end
-    end      
+    end
+    binding.pry      
     User.where(group_id: @group.id).destroy_all
     Post.where(group_id: @group.id).destroy_all  
     @group.destroy

@@ -4,7 +4,7 @@ class User < ApplicationRecord
   #devise :database_authenticatable, :registerable,
   #:recoverable, :rememberable, :trackable, :validatable #,:confirmable
  has_one :initial_form
- has_one :team_form
+ has_one :team_form, dependent: :destroy
  has_one :group 
  has_many :comments , :dependent => :nullify
  has_many :ranking_lines , :dependent => :nullify
