@@ -69,8 +69,7 @@ layout 'layouts/_admin_partial'
           Comment.where(user_id: user.id).destroy_all
         end
       end
-    end
-    binding.pry      
+    end      
     User.where(group_id: @group.id).destroy_all
     Post.where(group_id: @group.id).destroy_all  
     @group.destroy
