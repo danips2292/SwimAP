@@ -4,8 +4,13 @@
 	
 	<tr> <td> <%= assistance.name %>  </td>
 		<td> 
-		<%=  AssistancesUser.where(assistance_id: assistance.id).first.updated_at.to_date %>  
 
+		<% if AssistancesUser.where(assistance_id: assistance.id).first.nil? == false %>
+			<%=  AssistancesUser.where(assistance_id: assistance.id).first.updated_at.to_date %>  
+		<% else %>
+			<%= 'Sin fecha disponible' %>
+		<% end %>
+		
 		</td>
 		<td>
 		<%  if AssistancesUser.where(assistance_id: assistance.id, user_id: student.id).first.nil? == false && AssistancesUser.where(assistance_id: assistance.id, user_id: student.id).first.present %>
